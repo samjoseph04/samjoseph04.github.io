@@ -38,6 +38,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const fadeElements = document.querySelectorAll(".fade-in")
   fadeElements.forEach((el) => observer.observe(el))
 
+  // Hide scroll indicator on scroll
+  const scrollIndicator = document.querySelector(".scroll-indicator")
+
+  window.addEventListener("scroll", () => {
+    if (scrollIndicator) {
+      if (window.scrollY > 100) {
+        scrollIndicator.classList.add("hidden")
+      } else {
+        scrollIndicator.classList.remove("hidden")
+      }
+    }
+  })
+
   // Smooth Scrolling for Navigation Links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
