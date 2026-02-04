@@ -35,33 +35,49 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Fixed Background and Overlay Content -->
     <section id="hero" class="hero-section">
-        <div class="hero-bg-container"></div>
-        <div class="container hero-content">
-            <h1 class="fade-in">MCA Student<br>Building Practical Systems</h1>
-            <p class="hero-subtext fade-in delay-1">
-                Computer Science enthusiast with a strong interest in building real-world software systems. 
-                I focus on full-stack web development, problem-solving, and understanding how systems work from the ground up. 
-                I enjoy turning ideas into functional applications using clean code and modern technologies.
-            </p>
-            <div class="hero-cta fade-in delay-2">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-            </div>
+        <!-- Fixed background container -->
+        <div class="hero-bg-fixed"></div>
 
-            <div class="quick-facts fade-in delay-3">
-                <div class="fact-item">
-                    <span class="fact-label">Primary Languages</span>
-                    <span class="fact-value">C / Python / JavaScript</span>
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll Down</span>
+            <div class="scroll-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M19 12l-7 7-7-7" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Content that overlays on scroll -->
+        <div class="hero-overlay-content">
+            <div class="container hero-content">
+                <h1>MCA Student<br>Building Practical Systems</h1>
+                <p class="hero-subtext">
+                    Computer Science enthusiast with a strong interest in building real-world software systems.
+                    I focus on full-stack web development, problem-solving, and understanding how systems work from the
+                    ground up.
+                    I enjoy turning ideas into functional applications using clean code and modern technologies.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                 </div>
-                <div class="fact-item">
-                    <span class="fact-label">Focus Areas</span>
-                    <span class="fact-value">Systems & Algorithms</span>
-                </div>
-                <div class="fact-item">
-                    <span class="fact-label">Currently</span>
-                    <span class="fact-value">Building & Learning</span>
+
+                <div class="quick-facts">
+                    <div class="fact-item">
+                        <span class="fact-label">Primary Languages</span>
+                        <span class="fact-value">C / Python / JavaScript</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Focus Areas</span>
+                        <span class="fact-value">Systems & Algorithms</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-label">Currently</span>
+                        <span class="fact-value">Building & Learning</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -80,12 +96,12 @@
                 </div>
                 <div class="focus-card fade-in delay-1">
                     <h3>Low-Level Programming</h3>
-                    <p>Learning how systems work internally through C and Java, focusing on memory management, 
+                    <p>Learning how systems work internally through C and Java, focusing on memory management,
                         process handling, and performance-oriented programming.</p>
                 </div>
                 <div class="focus-card fade-in delay-2">
                     <h3>Problem Solving</h3>
-                    <p>Actively practicing coding problems and logical challenges to 
+                    <p>Actively practicing coding problems and logical challenges to
                         improve analytical thinking and write efficient, optimized solutions.</p>
                 </div>
             </div>
@@ -113,7 +129,8 @@
                         </div>
                         <!-- GitHub link option -->
                         <div class="project-links">
-                            <a href="https://github.com/samjoseph04/part-time-work-portal.git" class="btn-github" title="View on GitHub">
+                            <a href="https://github.com/samjoseph04/part-time-work-portal.git" class="btn-github"
+                                title="View on GitHub">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path
@@ -221,7 +238,8 @@
                 <div class="fund-item fade-in">
                     <h3>Data Structures & Algorithms</h3>
                     <ul>
-                        <li>Strong understanding of core data structures: arrays, linked lists, stacks, queues, trees, and basic graphs.</li>
+                        <li>Strong understanding of core data structures: arrays, linked lists, stacks, queues, trees,
+                            and basic graphs.</li>
                         <li>Knowledge of common algorithms including sorting, searching, and recursion.</li>
                         <li>Ability to choose appropriate data structures to optimize performance and memory usage.</li>
                         <li>Regular practice of algorithmic problem-solving to improve efficiency and scalability.</li>
@@ -231,7 +249,8 @@
                 <div class="fund-item fade-in delay-1">
                     <h3>Operating Systems</h3>
                     <ul>
-                        <li>Understanding of core operating system concepts such as process management and CPU scheduling.</li>
+                        <li>Understanding of core operating system concepts such as process management and CPU
+                            scheduling.</li>
                         <li>Basic knowledge of memory management, multitasking, and resource allocation.</li>
                         <li>Familiarity with file systems and how operating systems manage system resources.</li>
                         <li>Ability to write system-aware programs with better performance and stability.</li>
@@ -242,7 +261,8 @@
                     <h3>Database Systems</h3>
                     <ul>
                         <li>Hands-on experience with relational databases using MySQL.</li>
-                        <li>Understanding of database design concepts including normalization and table relationships.</li>
+                        <li>Understanding of database design concepts including normalization and table relationships.
+                        </li>
                         <li>Knowledge of primary keys, foreign keys, and indexing for performance optimization.</li>
                         <li>Ability to write efficient SQL queries for data retrieval and data manipulation.</li>
                         <li>Experience applying database concepts in real-world academic projects. </li>
@@ -258,10 +278,12 @@
             <h2 class="section-title fade-in">Learning Journey</h2>
             <div class="journey-content">
                 <div class="journey-text fade-in">
-                    <p>I started my journey in computer science with a strong curiosity about how software systems work. During my MCA program,
-                         I’ve been actively learning through hands-on projects, academic coursework, and self-practice.
-                         <p>I focus on building practical applications alongside strengthening theoretical concepts.
-                         Each project helps me improve my coding skills, system design thinking, and confidence as a developer.</p>
+                    <p>I started my journey in computer science with a strong curiosity about how software systems work.
+                        During my MCA program,
+                        I’ve been actively learning through hands-on projects, academic coursework, and self-practice.
+                    <p>I focus on building practical applications alongside strengthening theoretical concepts.
+                        Each project helps me improve my coding skills, system design thinking, and confidence as a
+                        developer.</p>
                 </div>
                 <div class="timeline fade-in delay-1">
                     <div class="timeline-item">
@@ -344,7 +366,7 @@
                 I'm actively seeking opportunities to apply my systems programming skills and grow as a developer.
                 Whether you want to discuss algorithms, systems design, or collaborate on projects—my inbox is open.
             </p>
-            
+
             <div class="contact-form-container fade-in delay-1">
                 <form id="contactForm" class="contact-form">
                     <div class="form-group">
@@ -364,7 +386,8 @@
             <div class="contact-links fade-in delay-2">
                 <a href="mailto:sam.joseph@example.com" class="btn btn-primary">Email Me</a>
                 <a href="https://github.com/samjoseph04" target="_blank" class="btn btn-outline">GitHub</a>
-                <a href="https://www.linkedin.com/in/sam-joseph-103b16317/" target="_blank" class="btn btn-outline">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/sam-joseph-103b16317/" target="_blank"
+                    class="btn btn-outline">LinkedIn</a>
             </div>
         </div>
     </section>
