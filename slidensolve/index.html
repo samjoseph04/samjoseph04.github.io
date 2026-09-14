@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#10142a">
+  <title>Slide & Solve</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">✦</div>
+        <div>
+          <p class="kicker">NUMBER PUZZLE</p>
+          <h1>SLIDE <span>&</span> SOLVE</h1>
+          <p class="tagline">How fast can you solve it?</p>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <button id="soundBtn" class="icon-btn" type="button" aria-label="Turn sound on" title="Sound">🔇</button>
+        <button id="themeBtn" class="icon-btn" type="button" aria-label="Switch theme" title="Theme">☀️</button>
+      </div>
+    </header>
+
+    <section class="difficulty-wrap">
+      <div class="section-label">
+        <span>CHALLENGE</span>
+        <strong id="difficultyName">Beginner</strong>
+      </div>
+      <div id="sizeSelector" class="size-selector" role="group" aria-label="Choose puzzle size"></div>
+    </section>
+
+    <section class="stats">
+      <article id="timeCard" class="stat-card timer-card">
+        <div class="stat-icon">⏱</div>
+        <div>
+          <span>TIME</span>
+          <strong id="time">00:00</strong>
+        </div>
+        <i id="timerPulse" class="timer-pulse" aria-hidden="true"></i>
+      </article>
+      <article class="stat-card">
+        <div class="stat-icon">✦</div>
+        <div>
+          <span>MOVES</span>
+          <strong id="moves">0</strong>
+        </div>
+      </article>
+      <article class="stat-card best-card">
+        <div class="stat-icon">🏆</div>
+        <div>
+          <span>BEST TIME</span>
+          <strong id="bestTime">--:--</strong>
+        </div>
+      </article>
+    </section>
+
+    <section class="game-shell">
+      <div class="board-frame">
+        <div id="board" class="board" aria-label="Sliding puzzle board"></div>
+      </div>
+      <div class="board-footer">
+        <p id="status" class="status"><span class="status-dot"></span>Make your first move to start the timer.</p>
+        <button id="newGameBtn" class="new-game" type="button"><span>🎮</span> NEW GAME</button>
+      </div>
+    </section>
+
+    <section class="how-to">
+      <div class="how-heading">
+        <span class="section-label">CONTROLS</span>
+        <span class="mobile-tip">Swipe to move</span>
+      </div>
+      <div class="control-grid">
+        <div class="control-item desktop-control">
+          <div class="keys"><kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd></div>
+          <span>Arrow Keys</span>
+        </div>
+        <div class="control-item desktop-control">
+          <div class="wasd"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></div>
+          <span>W A S D</span>
+        </div>
+        <div class="control-item mobile-control">
+          <div class="gesture">↕</div>
+          <span>Swipe a tile</span>
+        </div>
+        <div class="control-item">
+          <div class="gesture">👆</div>
+          <span>Tap an adjacent tile</span>
+        </div>
+        <div class="goal-tip">
+          <strong>GOAL</strong>
+          <span>Arrange every number in order, with the blank at the end.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="winModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="winTitle">
+      <div id="confetti" class="confetti" aria-hidden="true"></div>
+      <div class="win-badge">🏆</div>
+      <p class="kicker">PUZZLE COMPLETE</p>
+      <h2 id="winTitle">Amazing!</h2>
+      <p id="winMessage" class="win-message">You made it look easy.</p>
+
+      <div id="newBest" class="new-best" hidden>🏆 NEW BEST TIME!</div>
+
+      <div class="result-stats">
+        <div><span>TIME</span><strong id="finalTime">00:00</strong></div>
+        <div><span>MOVES</span><strong id="finalMoves">0</strong></div>
+        <div><span>BEST</span><strong id="modalBest">--:--</strong></div>
+      </div>
+
+      <div class="modal-buttons">
+        <button id="playAgainBtn" class="new-game" type="button">✦ PLAY AGAIN</button>
+        <button id="changeSizeBtn" class="outline-btn" type="button">CHANGE GRID</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
