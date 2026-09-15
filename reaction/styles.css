@@ -1,0 +1,35 @@
+*{box-sizing:border-box}
+:root{color-scheme:dark;--bg:#080a0f;--panel:#11151c;--line:#252b36;--text:#f4f6f8;--muted:#8d96a6;--green:#32e875;--red:#ff5368}
+html,body{margin:0;min-height:100%;background:var(--bg)}
+body{min-height:100vh;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button{font:inherit}
+.app{min-height:100vh;width:min(1500px,100%);margin:auto;padding:clamp(16px,3vw,38px);display:flex;flex-direction:column}
+.header{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding-bottom:16px}
+.eyebrow{margin:0 0 4px;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.22em}
+h1{margin:0;font-size:clamp(30px,4vw,48px);line-height:.9;letter-spacing:-.07em}
+h1 span{color:var(--green)}
+.stats{display:flex;gap:clamp(14px,3vw,32px)}
+.stats div{text-align:right}.stats span{display:block;color:var(--muted);font-size:9px;font-weight:900;letter-spacing:.14em}
+.stats b{display:block;margin-top:2px;font-size:14px;font-variant-numeric:tabular-nums}
+.game-wrap{flex:1;display:flex;min-height:0}
+.game{position:relative;width:100%;min-height:55vh;border:1px solid var(--line);border-radius:28px;background:#11151c;color:var(--text);display:grid;place-items:center;cursor:pointer;touch-action:manipulation;overflow:hidden;transition:background .12s,border-color .12s,transform .12s,box-shadow .12s}
+.game:hover{border-color:#343c4b}.game:active{transform:scale(.998)}
+.game.target{background:var(--target,#32e875);color:#061009;border-color:rgba(255,255,255,.4);box-shadow:0 0 80px rgba(50,232,117,.13)}
+.game.success{background:#101c15}.game.soon{background:#241117;border-color:#69303c;animation:shake .28s ease}
+.content{text-align:center;padding:30px;pointer-events:none;user-select:none}
+.content small{display:block;margin-bottom:9px;font-size:11px;font-weight:950;letter-spacing:.2em;opacity:.68}
+.content strong{display:block;font-size:clamp(36px,7vw,86px);line-height:.95;letter-spacing:-.065em;font-weight:950}
+.content span{display:block;margin-top:13px;font-size:clamp(12px,1.4vw,15px);font-weight:650;opacity:.65}
+#bar{display:block;width:min(180px,45vw);height:4px;margin:22px auto 0;border-radius:9px;background:rgba(255,255,255,.13);opacity:0;overflow:hidden}
+.waiting #bar{opacity:1}
+.waiting #bar:after{content:"";display:block;width:100%;height:100%;background:currentColor;transform-origin:left;animation:wait var(--delay,3s) linear forwards}
+.corner{position:absolute;width:34px;height:34px;opacity:.4}.tl{left:20px;top:20px;border-left:1px solid currentColor;border-top:1px solid currentColor}.tr{right:20px;top:20px;border-right:1px solid currentColor;border-top:1px solid currentColor}.bl{left:20px;bottom:20px;border-left:1px solid currentColor;border-bottom:1px solid currentColor}.br{right:20px;bottom:20px;border-right:1px solid currentColor;border-bottom:1px solid currentColor}
+.target #main{animation:pop .16s ease}.success #main{animation:pop .3s ease}
+footer{display:flex;align-items:center;gap:18px;padding-top:14px;color:var(--muted);font-size:11px;font-weight:700}
+footer span:nth-child(2){flex:1;text-align:center}
+#reset{border:0;background:none;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.08em;cursor:pointer}
+#reset:hover{color:var(--text)}
+@keyframes wait{to{transform:scaleX(1)}}@keyframes pop{50%{transform:scale(1.04)}100%{transform:none}}
+@keyframes shake{25%{transform:translateX(-4px)}50%{transform:translateX(4px)}75%{transform:translateX(-3px)}}
+@media(max-width:700px){.app{padding:14px 11px 16px}.header{align-items:flex-start}.stats{gap:11px}.stats b{font-size:12px}.game{min-height:calc(100vh - 145px);border-radius:19px}.corner{width:25px;height:25px}.tl{left:13px;top:13px}.tr{right:13px;top:13px}.bl{left:13px;bottom:13px}.br{right:13px;bottom:13px}footer{padding-top:10px;font-size:10px}footer span:nth-child(2){display:none}#reset{margin-left:auto}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important}}

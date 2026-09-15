@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080a0f">
+<title>React — Reaction Test</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="app">
+  <header class="header">
+    <div><p class="eyebrow">REACTION TEST</p><h1>React<span>.</span></h1></div>
+    <div class="stats">
+      <div><span>BEST</span><b id="best">—</b></div>
+      <div><span>AVG</span><b id="avg">—</b></div>
+      <div><span>STREAK</span><b id="streak">0</b></div>
+    </div>
+  </header>
+
+  <section class="game-wrap">
+    <button id="game" class="game ready" type="button" aria-label="Reaction test. Tap to start.">
+      <div class="content">
+        <small id="label">READY?</small>
+        <strong id="main">TAP TO START</strong>
+        <span id="sub">Wait for the color to change</span>
+        <i id="bar" aria-hidden="true"></i>
+      </div>
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+    </button>
+  </section>
+
+  <footer>
+    <span id="attempts">0 attempts</span>
+    <span id="feedback">Your best is waiting.</span>
+    <button id="reset" type="button">RESET BEST</button>
+  </footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
