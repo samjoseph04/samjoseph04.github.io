@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#070812">
+  <title>Neon Reflex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <div class="grid"></div>
+    <div class="scan"></div>
+
+    <header class="hud">
+      <div class="stat"><span>Score</span><b id="score">0</b></div>
+      <div class="stat"><span>Reaction</span><b id="reaction">--</b></div>
+      <div class="stat"><span>Streak</span><b id="streak">0</b></div>
+      <div class="stat"><span>Best</span><b id="best">0</b></div>
+    </header>
+
+    <section id="arena">
+      <div id="startScreen" class="center">
+        <div class="eyebrow">REFLEX CHALLENGE</div>
+        <h1>NEON<br>REFLEX</h1>
+        <p>Wait for the neon target.<br>Hit it as fast as you can.</p>
+        <button id="startBtn">START GAME</button>
+      </div>
+
+      <div id="status" class="status">GET READY</div>
+      <button id="target" class="target hidden" aria-label="Hit target">
+        <span></span>
+      </button>
+
+      <div id="feedback"></div>
+      <div id="flash"></div>
+    </section>
+
+    <div class="hint">CLICK / TAP THE TARGET • SPACE TO START</div>
+
+    <div id="gameOver" class="modal">
+      <div class="card">
+        <div class="eyebrow">RUN COMPLETE</div>
+        <h2>REFLEX CHECK</h2>
+        <div id="newBest"></div>
+
+        <div class="results">
+          <div><span>Score</span><b id="finalScore">0</b></div>
+          <div><span>Best Score</span><b id="finalBest">0</b></div>
+          <div><span>Average</span><b id="finalAvg">--</b></div>
+          <div><span>Best Reaction</span><b id="finalReaction">--</b></div>
+        </div>
+
+        <button id="restartBtn">PLAY AGAIN</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
