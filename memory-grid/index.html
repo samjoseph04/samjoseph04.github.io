@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="theme-color" content="#070812">
+<title>Memory Grid</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+<div class="bg-grid"></div><div class="scan"></div>
+<header><div class="brand"><i></i> MEMORY GRID</div><button id="sound">🔊</button></header>
+<section class="hud">
+<div><span>Level</span><b id="level">1</b></div>
+<div><span>Score</span><b id="score">0</b></div>
+<div><span>Best</span><b id="best">0</b></div>
+<div><span>Lives</span><b id="lives">3</b></div>
+</section>
+
+<section id="start" class="center">
+<div class="eyebrow">MEMORY CHALLENGE</div>
+<h1>MEMORY<br><em>GRID</em></h1>
+<p>Watch the pattern.<br>Remember the glowing tiles.<br>Then reproduce it.</p>
+<button class="primary" id="startBtn">START GAME</button>
+<small>MOUSE • TOUCH • KEYBOARD</small>
+</section>
+
+<section id="game" class="game hidden">
+<div class="round">
+<div><b id="phase">MEMORIZE</b><span id="instruction">Watch carefully...</span></div>
+<div class="progress"><i id="progress"></i></div>
+</div>
+<div id="board" class="board"></div>
+<div class="bottom"><span id="mistakes">Mistakes: 0 / 3</span><span id="patternInfo">Pattern: 0 tiles</span></div>
+</section>
+
+<div id="modal" class="modal">
+<div class="card">
+<div class="eyebrow">RUN COMPLETE</div>
+<h2 id="resultTitle">MEMORY LOST</h2>
+<div id="newBest"></div>
+<div class="results">
+<div><span>Score</span><b id="finalScore">0</b></div>
+<div><span>Level</span><b id="finalLevel">1</b></div>
+<div><span>Best</span><b id="finalBest">0</b></div>
+<div><span>Tiles</span><b id="finalTiles">0</b></div>
+</div>
+<button class="primary" id="restartBtn">PLAY AGAIN</button>
+</div>
+</div>
+<div id="flash"></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
