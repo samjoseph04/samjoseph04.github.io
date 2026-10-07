@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Glow</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="hud">
+    <div class="stat"><span>Level</span><b id="level">1</b></div>
+    <div class="stat"><span>Moves</span><b id="moves">0</b></div>
+    <div class="stat"><span>Par</span><b id="par">0</b></div>
+  </div>
+  <p id="status" role="status">Turn every light off</p>
+  <div id="grid" class="grid" role="grid" aria-label="Puzzle board"></div>
+  <div class="actions">
+    <button id="reset">Reset</button>
+    <button id="next" class="primary" hidden>Next level</button>
+  </div>
+  <p class="hint">Tapping a light flips it and its neighbours. Arrows to move, Space to tap, R to reset.</p>
+  <p id="best" class="hint"></p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
