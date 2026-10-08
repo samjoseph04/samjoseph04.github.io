@@ -1,6 +1,128 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+
+  // ── Games Section ─────────────────────────────────────────────
+  // Reads GAMES[] from games-data.js, builds cards dynamically.
+  // To add a new game: only games-data.js needs a new entry.
+
+  /** Emoji icons — fallback to 🎮 for unknown ids */
+  const GAME_ICONS = {
+    "archery":          "🏹",
+    "bus-game":         "🚌",
+    "clean-city":       "🌿",
+    "color-maze":       "🎨",
+    "dodge-the-blocks": "🟦",
+    "drop":             "💧",
+    "echo":             "🔊",
+    "glow":             "✨",
+    "harbour-control":  "⚓",
+    "memory-grid":      "🧠",
+    "neon-reflex":      "⚡",
+    "number-rush":      "🔢",
+    "reaction":         "⏱️",
+    "slidensolve":      "🧩",
+    "stack":            "📦",
+    "traffic":          "🚦",
+  }
+
+  function renderGamesSection() {
+    const grid = document.getElementById("games-grid")
+    if (!grid || typeof GAMES === "undefined") return
+
+    // Update the count badge
+    const countEl = document.getElementById("games-count")
+    if (countEl) countEl.textContent = `${GAMES.length} games`
+
+    // Build one card per game
+    GAMES.forEach((game, index) => {
+      const tagsHTML = (game.tags || [])
+        .map(t => `<span class="game-tag">${t}</span>`)
+        .join("")
+
+      const card = document.createElement("article")
+      card.className = "game-card fade-in"
+      card.dataset.category = game.category || "Casual"
+
+      // Per-game accent — drives gradient, glow, tags, button
+      card.style.setProperty("--game-color", game.color || "var(--accent-primary)")
+      card.style.setProperty("--game-color-rgb", game.colorRGB || "0,217,255")
+
+      // Stagger cards in groups of 3 (matching 3-col grid)
+      card.style.animationDelay = `${(index % 3) * 0.07}s`
+
+      card.innerHTML = `
+        <div class="game-card-preview" aria-hidden="true">
+          <span class="game-card-icon">${GAME_ICONS[game.id] || "🎮"}</span>
+        </div>
+        <div class="game-card-body">
+          <h3 class="game-card-title">${game.name}</h3>
+          <p class="game-card-desc">${game.description}</p>
+          <div class="game-card-footer">
+            <div class="game-tag-list">${tagsHTML}</div>
+            <a
+              class="game-card-play"
+              href="${game.folder}/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Play ${game.name} — opens in new tab"
+            >
+              Play
+              <svg class="play-arrow" viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      `
+
+      grid.appendChild(card)
+    })
+
+    // Fade-in on scroll (cards start hidden via .fade-in)
+    const cardObserver = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible") }),
+      { root: null, rootMargin: "0px", threshold: 0.06 }
+    )
+    grid.querySelectorAll(".game-card").forEach(c => cardObserver.observe(c))
+
+    // ── Filter chips ──────────────────────────────────────────
+    const chips = document.querySelectorAll(".filter-chip")
+    chips.forEach(chip => {
+      chip.addEventListener("click", () => {
+        // Update active chip
+        chips.forEach(c => {
+          c.classList.remove("is-active")
+          c.removeAttribute("aria-pressed")
+        })
+        chip.classList.add("is-active")
+        chip.setAttribute("aria-pressed", "true")
+
+        const filter = chip.dataset.filter
+        grid.querySelectorAll(".game-card").forEach(card => {
+          const visible = filter === "all" || card.dataset.category === filter
+          card.classList.toggle("card-hidden", !visible)
+        })
+      })
+    })
+
+    // ── Whole-card click ──────────────────────────────────────
+    // Clicking anywhere on the card (outside the Play link) navigates to the game
+    grid.addEventListener("click", e => {
+      if (e.target.closest(".game-card-play")) return // let the link handle itself
+      const card = e.target.closest(".game-card")
+      if (!card) return
+      const link = card.querySelector(".game-card-play")
+      if (link) window.open(link.href, "_blank", "noopener,noreferrer")
+    })
+  }
+
+  renderGamesSection()
+
+
   // Mobile Menu Toggle
   const hamburger = document.querySelector(".hamburger")
   const navLinks = document.querySelector(".nav-links")
