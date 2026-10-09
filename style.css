@@ -566,7 +566,7 @@ ul {
 }
 
 .fund-item li::before {
-  content: "â–¹";
+  content: "- ";
   position: absolute;
   left: 0;
   color: var(--accent-primary);
