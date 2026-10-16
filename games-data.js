@@ -179,4 +179,14 @@ const GAMES = [
     color:       "#10b981",
     colorRGB:    "16,185,129",
   },
+  {
+    id:          "rally",
+    name:        "Rally",
+    description: "A pong-style game against the computer. The first to 7 points wins.",
+    tags:        ["Timing", "Casual", "Reflex"],
+    category:    "Arcade",
+    folder:      "rally",
+    color:       "#E3879E",
+    colorRGB:    "227,135,158",
+  },
 ];
