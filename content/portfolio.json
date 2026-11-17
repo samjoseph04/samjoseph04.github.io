@@ -76,7 +76,7 @@
       ],
       "repository": "https://github.com/samjoseph04/personal_money_tracker",
       "demo": "",
-      "image": ""
+      "image": "/assets/d88db1ab-5dff-491a-bb5b-10f951127836.png"
     }
   ],
   "games": [
@@ -342,9 +342,9 @@
     {
       "id": "mca",
       "title": "Master of Computer Applications",
-      "organization": "",
-      "period": "Started 2025 · completion date to be added",
-      "description": "Learning through academic coursework, hands-on projects, and self-practice. Institution details to be added.",
+      "organization": "Rajagiri College of Social Sciences, Kalamassery",
+      "period": "2025 - Present",
+      "description": "Currently pursuing a Master of Computer Applications (MCA), focusing on advanced computing, software development, data analytics, and emerging technologies. Gaining practical experience through academic projects and hands-on implementation in Machine Learning, Artificial Intelligence, Cloud Computing, Cybersecurity, and Internet of Things.",
       "coursework": {
         "subjects": [
           "Programming & Data Structures.",
@@ -429,7 +429,7 @@
   "experience": [
     {
       "id": "era",
-      "title": "Developer Inter",
+      "title": "Developer Intern",
       "organization": "Emerging Educational Renaissance LLP (ERA)",
       "period": "May 2026",
       "description": "Resolved UI-related issues in a Flutter-based educational mobile app, improving usability and user \nexperience \nTested, debugged, and validated application fixes to ensure stable releases \nCollaborated with the development team to identify defects and troubleshoot issues, contributing to overall \napplication quality"
