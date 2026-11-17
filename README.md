@@ -1,8 +1,14 @@
 # Sam Joseph — portfolio & private studio
 
-Public portfolio: https://samjoseph.me/ — deployed through GitHub Actions from `main` in `samjoseph04/samjoseph04.github.io` on 17 November 2026. The legacy `master` branch remains available for rollback. The separate private admin is not live yet; Cloudflare Access, storage, DNS and the dedicated publishing secret still require completion.
+Public portfolio: https://samjoseph.me/ — deployed through GitHub Actions from `main` in `samjoseph04/samjoseph04.github.io` on 17 November 2026. The legacy `master` branch remains available for rollback. The separate private Worker is deployed at https://admin.samjoseph.me/ with owner-only Cloudflare Access, private D1/R2 and an encrypted GitHub publishing secret. DNS propagation is incomplete: Cloudflare's resolver sees the new hostname, while Google and this network still see the old nameservers. Owner login and live publishing are not verified yet.
 
 Read [PROJECT_BRIEF.md](PROJECT_BRIEF.md) for requirements, audited content, decisions, and the implementation plan; [AGENTS.md](AGENTS.md) records repository rules. See [docs/SETUP.md](docs/SETUP.md) for future cloud configuration and [docs/VERIFICATION.md](docs/VERIFICATION.md) for verification and limitations.
+
+## Private admin updates
+
+After DNS propagation completes, open https://admin.samjoseph.me/ and sign in through Cloudflare using the confirmed owner account. Edit the existing content sections, upload assets or a PDF in Resume, preview, and save the draft. **Review & publish** requires an explicit confirmation before committing to GitHub. Check the matching Actions deployment status before treating a change as live. The public PDF URL stays `/resume.pdf`. Saving a draft alone does not publish it.
+
+The owner generated and saved the repository-scoped publishing token directly in Cloudflare; no credential value belongs in this repository or chat. The reviewed expiration is 15 February 2027. Rotate the Worker secret before expiry using the same repository and minimal permissions. First live upload/publish verification is still pending DNS and owner sign-in.
 
 ## Shared SJ branding
 
