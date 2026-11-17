@@ -1,19 +1,21 @@
 {
   "$schema": "../../node_modules/wrangler/config-schema.json",
   "name": "sam-joseph-private-studio",
+  "account_id": "9481183d92e70aeb527feff478324c64",
   "main": "src/index.ts",
   "compatibility_date": "2026-11-12",
   "workers_dev": false,
   "preview_urls": false,
+  "routes": [{ "pattern": "admin.samjoseph.me", "custom_domain": true }],
   "assets": { "directory": "../admin/dist", "binding": "ASSETS", "run_worker_first": true, "not_found_handling": "single-page-application" },
-  "d1_databases": [{ "binding": "DB", "database_name": "portfolio-drafts", "database_id": "REPLACE_WITH_D1_DATABASE_ID", "migrations_dir": "migrations" }],
+  "d1_databases": [{ "binding": "DB", "database_name": "portfolio-drafts", "database_id": "1ea09dce-fd6e-42bc-8439-b3f6d6a5774e", "migrations_dir": "migrations" }],
   "r2_buckets": [{ "binding": "UPLOADS", "bucket_name": "portfolio-private-uploads" }],
   "vars": {
-    "ADMIN_ORIGIN": "https://REPLACE_WITH_PRIVATE_ADMIN_HOSTNAME",
-    "ACCESS_TEAM_DOMAIN": "REPLACE_WITH_TEAM.cloudflareaccess.com",
-    "ACCESS_AUD": "REPLACE_WITH_ACCESS_APPLICATION_AUDIENCE",
+    "ADMIN_ORIGIN": "https://admin.samjoseph.me",
+    "ACCESS_TEAM_DOMAIN": "royal-sunset-36b9.cloudflareaccess.com",
+    "ACCESS_AUD": "063755052f528ebfa218bded6643cf5c60d3127a4535eea751a8e1fb123255f3",
     "GITHUB_OWNER": "samjoseph04",
     "GITHUB_REPO": "samjoseph04.github.io",
-    "GITHUB_BRANCH": "REPLACE_WITH_CONFIRMED_DEPLOYMENT_BRANCH"
+    "GITHUB_BRANCH": "main"
   }
 }
