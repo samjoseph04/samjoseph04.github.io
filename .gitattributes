@@ -1,0 +1,5 @@
+* text=auto
+# The imported games, portrait, logo and resume must retain exact source bytes
+# on Windows checkouts as well as Linux deployment runners.
+apps/web/public/** -text
+docs/audit/assets/** -text

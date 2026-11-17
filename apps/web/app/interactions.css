@@ -1,0 +1,201 @@
+/* Progressive enhancement: hide native pointers only while a fine-mouse
+   replacement is active. Keyboard, touch, reduced motion and no-JS stay native. */
+.magnetic-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: inherit;
+  gap: inherit;
+}
+.arcade-filters [data-magnetic-content] {
+  display: inline-block;
+}
+.interaction-overlays {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 110;
+  pointer-events: none;
+}
+.interaction-cursor-dot,
+.interaction-cursor-ring,
+.interaction-cursor-tail,
+.interaction-click {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 110;
+}
+.interaction-cursor-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--paper);
+  translate: -50% -50%;
+  box-shadow: 0 0 0 1px var(--shadow);
+}
+.interaction-cursor-ring > span {
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--tone-secondary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--shadow);
+  translate: -50% -50%;
+}
+.interaction-cursor-ring > span > span {
+  font: 9px var(--font-mono);
+  letter-spacing: 0.05em;
+}
+.interaction-cursor-ring.has-label > span {
+  background: var(--tone-surface);
+  color: var(--paper);
+  border-color: var(--tone-secondary);
+}
+.interaction-cursor-ring.is-text > span {
+  position: relative;
+  border: 0;
+  border-radius: 0;
+  background: var(--paper);
+}
+.interaction-cursor-ring.is-text > span::before,
+.interaction-cursor-ring.is-text > span::after {
+  content: '';
+  position: absolute;
+  left: -3px;
+  width: 8px;
+  height: 1px;
+  background: var(--paper);
+}
+.interaction-cursor-ring.is-text > span::before { top: 0; }
+.interaction-cursor-ring.is-text > span::after { bottom: 0; }
+.interaction-cursor-tail {
+  width: 5px;
+  height: 5px;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: 0 0 0 1px var(--shadow);
+}
+.interaction-click {
+  width: 34px;
+  height: 34px;
+  border: 1px solid;
+  border-radius: 50%;
+  translate: -50% -50%;
+}
+/* Lighting is clipped inside selected sections, clear of the straight boundary fades. */
+.interaction-light-window {
+  position: absolute;
+  inset: 100px 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 56px,
+    #000 calc(100% - 56px),
+    transparent
+  );
+}
+.interaction-light-spot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--light-wash), transparent 70%);
+  transform: translate3d(calc(var(--light-x, 0px) - 240px), calc(var(--light-y, 0px) - 240px), 0);
+  transition: transform 0.18s ease-out;
+}
+.interaction-light-window[data-light-active] {
+  opacity: 1;
+}
+.interaction-light-window[data-light-active] .interaction-light-spot {
+  will-change: transform;
+}
+.portfolio-root :is(.project-visual, .hero-portrait figcaption, .arcade-card-content) {
+  transition:
+    box-shadow 0.24s ease,
+    color 0.24s ease,
+    transform 0.24s ease;
+}
+.portfolio-root :is(a, button, summary):active {
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent-link) 35%, transparent);
+}
+.portfolio-root .project:focus-within .project-visual {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent-link) 35%, transparent);
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .portfolio-root[data-custom-cursor='active'],
+  .portfolio-root[data-custom-cursor='active'] * {
+    cursor: none !important;
+  }
+  .portfolio-root[data-interactions='pointer'] [data-magnetic-content] {
+    transform: translate3d(var(--magnet-x, 0px), var(--magnet-y, 0px), 0);
+    transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  [data-magnet-active] {
+    will-change: transform;
+  }
+  .portfolio-root .arcade-card:hover .arcade-card-content {
+    transform: translateY(-2px);
+  }
+  .portfolio-root .project:hover .project-visual {
+    box-shadow: 0 0 0 1px var(--line);
+  }
+  .portfolio-root .project:hover .project-copy h3 {
+    color: var(--accent-link);
+  }
+  .portfolio-root
+    :is(
+      .text-link,
+      .project-actions a,
+      .social-links a,
+      .back-top,
+      .nav-contact,
+      summary,
+      button
+    ):hover
+    svg:not([data-magnetic-content]) {
+    translate: 1px -1px;
+  }
+  .portfolio-root :is(a, button, summary) svg {
+    transition: translate 0.2s ease;
+  }
+  @supports (background-clip: text) {
+    .portfolio-root [data-heading-active] {
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-image: radial-gradient(
+        ellipse 190px 110px at var(--heading-x, 50%) var(--heading-y, 50%),
+        color-mix(in srgb, var(--tone-secondary) 22%, var(--paper)),
+        var(--paper) 85%
+      );
+    }
+    .portfolio-root [data-heading-active] i {
+      -webkit-text-fill-color: currentColor;
+    }
+    .portfolio-root .contact-section h2[data-heading-active] > svg {
+      color: var(--paper);
+    }
+  }
+}
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .interaction-overlays,
+  .interaction-light-window {
+    display: none;
+  }
+  .portfolio-root [data-magnetic-content] {
+    transform: none !important;
+  }
+}
+@media (max-width: 560px) {
+  .interaction-light-window {
+    inset-block: 80px;
+  }
+}

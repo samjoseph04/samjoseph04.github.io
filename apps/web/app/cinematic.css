@@ -1,0 +1,122 @@
+/* Static markup is always visible. Only the mounted, eligible driver prepares it. */
+.brand-loading {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--tone-surface);
+  pointer-events: none;
+}
+.brand-loading-mark { display: block; width: 38px; height: auto; }
+.brand-loading--initial { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  html[data-cinema-boot='on']:not(:has(.portfolio-root[data-cinema='on'])) .brand-loading--initial {
+    display: grid;
+  }
+  .brand-loading-mark { animation: brand-loading-pulse 1.2s ease-in-out infinite alternate; }
+  html[data-cinema-boot='on'] .portfolio-root:not([data-cinema='on']) [data-reveal] {
+    opacity: 0;
+  }
+}
+@keyframes brand-loading-pulse { from { opacity: 0.55; } to { opacity: 1; } }
+.cinema-text,
+.cinema-visual {
+  display: inline;
+}
+.cinema-word,
+.reveal-unit {
+  display: inline-block;
+  vertical-align: baseline;
+}
+.cinema-word {
+  white-space: nowrap;
+  clip-path: inset(-0.12em -0.08em -0.22em);
+}
+.about-symbol > span {
+  display: inline-block;
+}
+.portfolio-root[data-cinema='on'] [data-reveal-state='pending']:is([data-reveal='words'], [data-reveal='characters']) .reveal-unit {
+  opacity: 0;
+  transform: translateY(0.65em);
+}
+.portfolio-root[data-cinema='on'] [data-reveal-state='pending']:is([data-reveal='enter'], [data-reveal='accent']) {
+  opacity: 0;
+}
+.portfolio-root[data-cinema='on'] [data-reveal-state='pending'][data-reveal='image'] > * {
+  opacity: 0;
+  clip-path: inset(0 0 100% 0);
+}
+/* Only active animation gets layer hints; no permanent per-character promotion. */
+.portfolio-root [data-reveal-state='revealing']:is([data-reveal='words'], [data-reveal='characters']) .reveal-unit {
+  will-change: transform, opacity;
+}
+.portfolio-root [data-reveal-state='revealing'][data-reveal='image'] > * {
+  will-change: clip-path, opacity;
+}
+.case-study summary svg {
+  transition: rotate 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Native disclosure animation: no click interception, fake buttons or hidden JS panels.
+   Unsupported browsers keep normal, immediate <details> behavior. */
+@supports (interpolate-size: allow-keywords) and selector(details::details-content) {
+  .portfolio-root :is(.case-study, .education-details) {
+    interpolate-size: allow-keywords;
+  }
+  .portfolio-root :is(.case-study, .education-details)::details-content {
+    height: 0;
+    opacity: 0;
+    overflow: clip;
+    transition:
+      height 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.3s ease,
+      content-visibility 0.42s allow-discrete;
+  }
+  .portfolio-root :is(.case-study, .education-details)[open]::details-content {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+/* A restrained editorial hold. No pin spacers, added scroll length or pinned images. */
+@media (min-width: 1100px) and (min-height: 800px) and (prefers-reduced-motion: no-preference) {
+  .portfolio-root[data-cinema='on'] .projects-section > .section-heading {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    background: var(--tone-deep);
+  }
+  .portfolio-root[data-cinema='on'] .projects-section > .section-heading::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    inset-inline: 0;
+    height: 28px;
+    background: linear-gradient(180deg, var(--tone-deep), transparent);
+    pointer-events: none;
+  }
+}
+
+/* Progressive cross-document dissolve for portfolio documents. Legacy games do
+   not opt in; external links, downloads, and native hash navigation are untouched. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root) { animation-duration: 0.22s; }
+  ::view-transition-new(root) { animation-duration: 0.42s; }
+  ::view-transition-group(root) { animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-root [data-reveal],
+  .portfolio-root .reveal-unit {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    will-change: auto !important;
+  }
+}

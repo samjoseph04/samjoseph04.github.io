@@ -1,0 +1,23 @@
+{
+  "name": "@portfolio/web",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "typegen": "next typegen",
+    "predev": "node ../../scripts/generate-brand.mjs",
+    "prebuild": "node ../../scripts/generate-brand.mjs && tsx ../../scripts/validate-resume.mts"
+  },
+  "dependencies": {
+    "@portfolio/content": "*",
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "motion": "14.13.0",
+    "lucide-react": "1.72.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "4.3.5",
+    "@tailwindcss/postcss": "4.3.5"
+  }
+}

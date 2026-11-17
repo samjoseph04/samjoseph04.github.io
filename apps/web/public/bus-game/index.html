@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUS! Counter Challenge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section id="startScreen" class="screen active">
+      <div class="logo">🚌</div>
+      <h1>BUS! Counter Challenge</h1>
+      <p class="tagline">Count carefully. Catch every BUS.</p>
+
+      <div class="instructions">
+        <div><span class="key count-key">COUNT</span> for normal numbers</div>
+        <div><span class="key bus-key">BUS</span> when the <strong>next</strong> number is a multiple of 5</div>
+        <div>Make exactly one move every second.</div>
+      </div>
+
+      <button id="startBtn" class="primary-btn">Start Game</button>
+      <p class="hint">Best score is saved automatically.</p>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <header class="topbar">
+        <div class="stat">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat">
+          <span>Streak</span>
+          <strong id="streak">0</strong>
+        </div>
+        <div class="stat">
+          <span>Best</span>
+          <strong id="highScore">0</strong>
+        </div>
+      </header>
+
+      <div class="game-card">
+        <p class="label">CURRENT NUMBER</p>
+        <div id="counter" class="counter">0</div>
+
+        <div id="prompt" class="prompt count-prompt">
+          <span class="prompt-icon">↑</span>
+          <span id="promptText">COUNT to continue</span>
+        </div>
+
+        <div class="timer">
+          <div class="timer-label">
+            <span>TIME</span>
+            <span id="timerText">1.00s</span>
+          </div>
+          <div class="timer-track">
+            <div id="timerBar" class="timer-bar"></div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="countBtn" class="action-btn count-btn">
+            <span>COUNT</span>
+            <small>+1</small>
+          </button>
+          <button id="busBtn" class="action-btn bus-btn">
+            <span>BUS 🚌</span>
+            <small>×5</small>
+          </button>
+        </div>
+
+        <p class="next-hint">Watch the next number — BUS replaces COUNT at 5, 10, 15…</p>
+      </div>
+    </section>
+
+    <section id="gameOverScreen" class="screen">
+      <div class="game-over-icon">💥</div>
+      <p class="label">GAME OVER</p>
+      <h2>Missed the bus!</h2>
+
+      <div class="results">
+        <div>
+          <span>Final Score</span>
+          <strong id="finalScore">0</strong>
+        </div>
+        <div>
+          <span>Reached</span>
+          <strong id="finalCounter">0</strong>
+        </div>
+        <div>
+          <span>Best Score</span>
+          <strong id="finalHighScore">0</strong>
+        </div>
+      </div>
+
+      <button id="againBtn" class="primary-btn">Play Again</button>
+    </section>
+  </main>
+
+  <div id="flash" class="flash" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>

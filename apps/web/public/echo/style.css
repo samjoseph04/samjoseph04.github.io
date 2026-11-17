@@ -1,0 +1,27 @@
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f1efe9;--ink:#232b2a;--mute:#838b87;--line:#d9d6cd}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181a;--ink:#e8ecea;--mute:#72807b;--line:#273033}}
+:root[data-theme="dark"]{--bg:#14181a;--ink:#e8ecea;--mute:#72807b;--line:#273033}
+*,*:before,*:after{box-sizing:inherit}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Avenir Next",Avenir,"Segoe UI",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+main{min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px 20px}
+.hud{text-align:center}
+#score{font-size:clamp(60px,15vmin,104px);font-weight:200;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+#best{margin-top:8px;font-size:13px;color:var(--mute);letter-spacing:.04em;min-height:1em}
+#status{margin:0;min-height:1.4em;font-size:16px;color:var(--mute);text-align:center}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:min(88vw,380px,52vh);aspect-ratio:1}
+.pad{border:0;border-radius:22px;padding:0;cursor:pointer;
+  background:color-mix(in srgb,var(--c) 34%,var(--bg));transition:background .12s,box-shadow .12s,transform .12s,opacity .2s}
+.pad.lit{background:var(--c);box-shadow:0 0 36px color-mix(in srgb,var(--c) 70%,transparent);transform:scale(.97)}
+.pad.wrong{animation:shake .35s}
+.grid.locked .pad{cursor:default}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.pad:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.actions{display:flex;gap:10px}
+.actions button{min-height:44px;padding:10px 20px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);font:inherit;font-size:14px;cursor:pointer}
+.actions .primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.hint{margin:0;font-size:12px;color:var(--mute)}
+@media (max-width:700px){.hint{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}

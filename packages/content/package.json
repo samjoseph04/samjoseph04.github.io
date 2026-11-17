@@ -1,0 +1,8 @@
+{
+  "name": "@portfolio/content",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./schema.ts", "./categories": "./categories.ts" },
+  "dependencies": { "zod": "4.6.7" }
+}

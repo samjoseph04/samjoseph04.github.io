@@ -1,0 +1,447 @@
+{
+  "schemaVersion": 1,
+  "personal": {
+    "name": "Sam Joseph",
+    "role": "Computer Science Student",
+    "introduction": "Computer science enthusiast building practical web applications, exploring how systems work, and turning ideas into functional software.",
+    "about": "I started my journey in computer science with a curiosity about how software systems work. During my MCA program, I have been learning through hands-on projects, academic coursework, and self-practice.\n\nI focus on full-stack web development and problem-solving. Each project is an opportunity to improve my code, understand system design, and build something useful.",
+    "portrait": "/assets/sam-joseph-portrait.webp",
+    "portraitAlt": "Sam Joseph smiling beside foliage, in the supplied black-and-white portrait.",
+    "email": "sam.joseph04@gmail.com",
+    "github": "https://github.com/samjoseph04",
+    "linkedin": "https://www.linkedin.com/in/sam-joseph-103b16317/"
+  },
+  "projects": [
+    {
+      "id": "part-time-work-portal",
+      "title": "Part-Time Work Portal",
+      "category": "Full-stack web application",
+      "description": "Connecting students with part-time opportunities based on locality and experience, while giving employers a place to post jobs and manage applications.",
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express",
+        "MySQL"
+      ],
+      "problem": "Students need a centralized, simple portal to find part-time opportunities. Employers need an easy way to post jobs and manage applications.",
+      "approach": "A React frontend and MySQL database support three user types: Admin, Employer, and Student. Employers can post openings with experience, pay, and location details. Students can browse and filter jobs by locality, type, and requirements.",
+      "learning": [
+        "Building a full-stack system using React and MySQL.",
+        "Designing relational databases.",
+        "Structuring separate modules for Admin, Employer, and Student."
+      ],
+      "repository": "https://github.com/samjoseph04/part-time-work-portal.git",
+      "demo": "",
+      "image": ""
+    },
+    {
+      "id": "carpooling-management-system",
+      "title": "Carpooling Management System",
+      "category": "Web application / Transportation",
+      "description": "A ride-sharing application connecting drivers and riders, with map-based search, ride bookings, and separate workflows for each user.",
+      "technologies": [
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "Google Maps API"
+      ],
+      "problem": "Daily commuters can struggle to find convenient, affordable transport, while people driving alone have empty seats.",
+      "approach": "A PHP and MySQL application with Google Maps API for location-based search. Drivers register, submit license details for admin approval, and create rides with routes, dates, seats, and prices. Riders search using a map interface and book available seats.",
+      "learning": [
+        "Implementing map search and geolocation with Google Maps API.",
+        "Working with PHP sessions and user authentication.",
+        "Implementing CRUD operations for rides, bookings, and users."
+      ],
+      "repository": "",
+      "demo": "",
+      "image": ""
+    },
+    {
+      "id": "personal-money-tracker",
+      "title": "CoinFlow – Personal Money Tracker",
+      "category": "Mobile App Development",
+      "description": "A minimal, offline-first personal expense tracking application built with Flutter. CoinFlow helps users record daily expenses quickly, monitor spending habits, and understand their expenses through a clean dashboard with daily totals, recent transactions, and category-based insights.",
+      "technologies": [
+        "Flutter, Dart, Hive, Provider, intl"
+      ],
+      "problem": "Managing daily expenses can become difficult when users have to navigate complicated financial apps or depend on internet connectivity. There is a need for a simple and fast way to record expenses and keep track of daily spending.",
+      "approach": "Developed CoinFlow using Flutter with an offline-first approach. Implemented a quick two-tap expense entry flow, local data persistence using Hive, and Provider for state management. Created a clean dashboard to display today's spending, recent expenses, and category-wise insights.",
+      "learning": [
+        "Building cross-platform mobile applications using Flutter and Dart.",
+        "Implementing local data persistence with Hive.",
+        "Managing application state using Provider.",
+        "Designing clean and user-friendly interfaces.",
+        "Structuring applications using models, providers, screens, services, and reusable widgets.",
+        "Building offline-first applications."
+      ],
+      "repository": "https://github.com/samjoseph04/personal_money_tracker",
+      "demo": "",
+      "image": ""
+    }
+  ],
+  "games": [
+    {
+      "id": "archery",
+      "name": "Archery",
+      "description": "Pull back, aim, and release — a precision challenge that tests your timing and steady hand.",
+      "featured": false,
+      "category": "Reflex",
+      "tags": [
+        "Precision",
+        "Canvas"
+      ],
+      "destination": "/archery/"
+    },
+    {
+      "id": "bus-game",
+      "name": "Bus Game",
+      "description": "Count once each second, choosing BUS instead of COUNT whenever the next number is a multiple of five.",
+      "featured": false,
+      "category": "Arcade",
+      "tags": [
+        "Driving",
+        "Arcade"
+      ],
+      "destination": "/bus-game/"
+    },
+    {
+      "id": "clean-city",
+      "name": "Clean City",
+      "description": "Collect garbage on a city grid, avoid moving cars, and refuel before your truck runs out of fuel.",
+      "featured": false,
+      "category": "Strategy",
+      "tags": [
+        "Strategy",
+        "Simulation"
+      ],
+      "destination": "/clean-city/"
+    },
+    {
+      "id": "color-maze",
+      "name": "Color Maze",
+      "description": "Find the glowing exit through a changing maze before the timer runs out.",
+      "featured": false,
+      "category": "Puzzle",
+      "tags": [
+        "Puzzle",
+        "Maze"
+      ],
+      "destination": "/color-maze/"
+    },
+    {
+      "id": "dodge-the-blocks",
+      "name": "Dodge the Blocks",
+      "description": "Survive an endless storm of falling blocks — dodge, weave, and outlast them all.",
+      "featured": false,
+      "category": "Reflex",
+      "tags": [
+        "Reflex",
+        "Survival"
+      ],
+      "destination": "/dodge-the-blocks/"
+    },
+    {
+      "id": "drop",
+      "name": "Drop",
+      "description": "Move your paddle to catch falling circles and avoid the squares, using mouse, touch, or keyboard.",
+      "featured": false,
+      "category": "Casual",
+      "tags": [
+        "Timing",
+        "Casual"
+      ],
+      "destination": "/drop/"
+    },
+    {
+      "id": "echo",
+      "name": "Echo",
+      "description": "Watch the four-pad sequence, then repeat the pattern as each round grows longer.",
+      "featured": false,
+      "category": "Puzzle",
+      "tags": [
+        "Memory",
+        "Audio"
+      ],
+      "destination": "/echo/"
+    },
+    {
+      "id": "glow",
+      "name": "Glow",
+      "description": "Turn every light off by toggling a cell and its neighbours in a series of grid puzzles.",
+      "featured": false,
+      "category": "Casual",
+      "tags": [
+        "Rhythm",
+        "Neon"
+      ],
+      "destination": "/glow/"
+    },
+    {
+      "id": "harbour-control",
+      "name": "Harbour Control",
+      "description": "Guide ships into port safely, manage docking queues, and prevent maritime collisions.",
+      "featured": false,
+      "category": "Strategy",
+      "tags": [
+        "Strategy",
+        "Management"
+      ],
+      "destination": "/harbour-control/"
+    },
+    {
+      "id": "memory-grid",
+      "name": "Memory Grid",
+      "description": "Watch the grid flash, then recreate the pattern — each round harder than the last.",
+      "featured": false,
+      "category": "Puzzle",
+      "tags": [
+        "Memory",
+        "Puzzle"
+      ],
+      "destination": "/memory-grid/"
+    },
+    {
+      "id": "neon-reflex",
+      "name": "Neon Reflex",
+      "description": "React to flashing neon cues before they vanish — the ultimate reaction-speed test.",
+      "featured": false,
+      "category": "Reflex",
+      "tags": [
+        "Reflex",
+        "Neon"
+      ],
+      "destination": "/neon-reflex/"
+    },
+    {
+      "id": "number-rush",
+      "name": "Number Rush",
+      "description": "Tap numbers in the correct order against the clock — speed and accuracy both count.",
+      "featured": false,
+      "category": "Arcade",
+      "tags": [
+        "Speed",
+        "Arcade"
+      ],
+      "destination": "/number-rush/"
+    },
+    {
+      "id": "reaction",
+      "name": "Reaction",
+      "description": "Wait for the signal, then click as fast as humanly possible — a pure reflex benchmark.",
+      "featured": false,
+      "category": "Reflex",
+      "tags": [
+        "Reflex",
+        "Speed"
+      ],
+      "destination": "/reaction/"
+    },
+    {
+      "id": "slidensolve",
+      "name": "Slide n Solve",
+      "description": "Slide numbered tiles into order, leaving the blank at the end, and try to beat your best time.",
+      "featured": false,
+      "category": "Puzzle",
+      "tags": [
+        "Puzzle",
+        "Classic"
+      ],
+      "destination": "/slidensolve/"
+    },
+    {
+      "id": "stack",
+      "name": "Stack",
+      "description": "Stack blocks with split-second timing and build the tallest tower you can manage.",
+      "featured": false,
+      "category": "Casual",
+      "tags": [
+        "Timing",
+        "Casual"
+      ],
+      "destination": "/stack/"
+    },
+    {
+      "id": "traffic",
+      "name": "Traffic",
+      "description": "Control signals at chaotic intersections to keep the city moving and avoid gridlock.",
+      "featured": false,
+      "category": "Strategy",
+      "tags": [
+        "Strategy",
+        "Management"
+      ],
+      "destination": "/traffic/"
+    },
+    {
+      "id": "rally",
+      "name": "Rally",
+      "description": "A pong-style game against the computer. The first to 7 points wins.",
+      "featured": false,
+      "category": "Arcade",
+      "tags": [
+        "Timing",
+        "Casual",
+        "Reflex"
+      ],
+      "destination": "/rally/"
+    }
+  ],
+  "skills": [
+    {
+      "id": "c",
+      "name": "C",
+      "category": "Languages"
+    },
+    {
+      "id": "cpp",
+      "name": "C++",
+      "category": "Languages"
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "category": "Languages"
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "category": "Languages"
+    },
+    {
+      "id": "sql",
+      "name": "SQL",
+      "category": "Languages"
+    },
+    {
+      "id": "tool-1",
+      "name": "Git & GitHub",
+      "category": "Tools & platforms"
+    },
+    {
+      "id": "tool-2",
+      "name": "Linux / Bash",
+      "category": "Tools & platforms"
+    },
+    {
+      "id": "tool-3",
+      "name": "VS Code",
+      "category": "Tools & platforms"
+    },
+    {
+      "id": "tool-4",
+      "name": "GDB",
+      "category": "Tools & platforms"
+    },
+    {
+      "id": "tool-5",
+      "name": "React.js",
+      "category": "Tools & platforms"
+    }
+  ],
+  "education": [
+    {
+      "id": "mca",
+      "title": "Master of Computer Applications",
+      "organization": "",
+      "period": "Started 2025 · completion date to be added",
+      "description": "Learning through academic coursework, hands-on projects, and self-practice. Institution details to be added.",
+      "coursework": {
+        "subjects": [
+          "Programming & Data Structures.",
+          "Systems & Architecture.",
+          "Data & Databases.",
+          "Software Development."
+        ],
+        "programmingLanguages": [
+          "C and C++.",
+          "Java.",
+          "Python.",
+          "SQL & PL/SQL.",
+          "HTML, CSS, and JavaScript."
+        ],
+        "technologies": [
+          "Programming Languages: C, C++, Java, Python, PHP, JavaScript, SQL",
+          "Web & Frontend: HTML, CSS, React",
+          "Backend & Frameworks: Spring Boot, Hibernate, Node.js, J2EE (Servlets, JSP)",
+          "Databases & Big Data Tools: MySQL, Oracle",
+          "Cloud & DevOps Tools: Docker, Kubernetes, Git",
+          "Mobile & IoT Platforms: Android SDK, Flutter, Arduino, Raspberry Pi"
+        ],
+        "concepts": [
+          "Core Computer Science",
+          "Software Engineering",
+          "Database Theory",
+          "Networking & Security",
+          "Cloud & Distributed Systems",
+          "Artificial Intelligence"
+        ],
+        "note": ""
+      }
+    },
+    {
+      "id": "computer-science-degree",
+      "title": "Bachelor's degree (Computer Science)",
+      "organization": "Rajagiri College of Management and Applied Sciences, Kakkanad",
+      "period": "2022 - 2025",
+      "description": "Completed a Bachelor's degree in Computer Science with a foundation in programming, database management, software development, and computer systems. Gained practical experience through academic projects, including the development of a Carpooling Management System using PHP, MySQL, HTML, and CSS.",
+      "coursework": {
+        "subjects": [
+          "Data Structures",
+          "Database Management Systems",
+          "Object-Oriented Programming",
+          "Operating Systems",
+          "Computer Networks",
+          "Software Engineering",
+          "Web Development",
+          "Mathematics and Statistics"
+        ],
+        "programmingLanguages": [
+          "C",
+          "C++",
+          "Java",
+          "Python",
+          "PHP",
+          "JavaScript"
+        ],
+        "technologies": [
+          "HTML",
+          "CSS",
+          "MySQL",
+          "Git",
+          "GitHub",
+          "Visual Studio Code",
+          "XAMPP"
+        ],
+        "concepts": [
+          "Object-Oriented Programming",
+          "Data Structures and Algorithms",
+          "Relational Database Design",
+          "SQL and Database Management",
+          "Client-Server Architecture",
+          "Web Application Development",
+          "Software Development Life Cycle"
+        ],
+        "note": ""
+      }
+    }
+  ],
+  "achievements": [],
+  "experience": [
+    {
+      "id": "era",
+      "title": "Developer Inter",
+      "organization": "Emerging Educational Renaissance LLP (ERA)",
+      "period": "May 2026",
+      "description": "Resolved UI-related issues in a Flutter-based educational mobile app, improving usability and user \nexperience \nTested, debugged, and validated application fixes to ensure stable releases \nCollaborated with the development team to identify defects and troubleshoot issues, contributing to overall \napplication quality"
+    }
+  ],
+  "resume": {
+    "file": "/resume.pdf",
+    "label": "Download resume",
+    "stagedFile": "",
+    "uploadedAt": "2026-11-17T06:43:41.329Z",
+    "originalName": "Sam_Joseph_Resume.pdf",
+    "size": 360049,
+    "sha256": "420afd949f989cc93feed569b0cb7f31dc02ce41fe1398917f3da291d8cdb29e"
+  }
+}

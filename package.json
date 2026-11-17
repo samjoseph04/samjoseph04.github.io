@@ -1,0 +1,29 @@
+{
+  "name": "sam-joseph-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "npm run dev -w @portfolio/web",
+    "dev:admin": "npm run dev -w @portfolio/admin",
+    "dev:worker": "npm run dev -w @portfolio/worker",
+    "build": "npm run build -w @portfolio/web && npm run build -w @portfolio/admin",
+    "check": "npm run typegen -w @portfolio/web && tsc --noEmit -p apps/web && tsc --noEmit -p apps/admin && tsc --noEmit -p apps/worker",
+    "test": "tsx --test tests/*.test.ts",
+    "verify:export": "node scripts/verify-export.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "sharp": "^0.35.5",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}

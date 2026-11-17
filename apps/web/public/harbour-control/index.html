@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harbor Control</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header class="hud">
+    <div class="stat"><span>Score</span><b id="score">0</b></div>
+    <div class="stat"><span>Docked</span><b id="docked">0</b></div>
+    <div class="stat"><span>Waiting</span><b id="waiting">0</b></div>
+    <div class="stat"><span>Time</span><b id="time">0:00</b></div>
+    <div class="stat"><span>Lives</span><b id="lives" class="hearts">♥♥♥</b></div>
+    <div class="stat"><span>High score</span><b id="high">0</b></div>
+  </header>
+
+  <div class="stage">
+    <canvas id="game" width="900" height="600" aria-label="Harbor map"></canvas>
+
+    <section id="startScreen" class="overlay">
+      <div class="panel">
+        <h1>Harbor Control</h1>
+        <p class="lead">Guide every ship to a free dock without letting two ships meet.</p>
+        <ol class="steps">
+          <li>Select a waiting ship.</li>
+          <li>Select a dock. Matching colors score double.</li>
+          <li>Press Enter or Assign.</li>
+          <li>Watch the routes and keep ships apart.</li>
+        </ol>
+        <p class="keys">W / ↑ S / ↓ choose ship &nbsp;•&nbsp; A / ← D / → choose dock<br>Enter assigns &nbsp;•&nbsp; Space pauses &nbsp;•&nbsp; Clicking ships and docks works too</p>
+        <button id="startBtn" class="big">Start shift</button>
+      </div>
+    </section>
+
+    <section id="pauseScreen" class="overlay hidden">
+      <div class="panel small">
+        <h2>Paused</h2>
+        <button id="resumeBtn" class="big">Resume</button>
+      </div>
+    </section>
+
+    <section id="overScreen" class="overlay hidden">
+      <div class="panel">
+        <h2>Harbor closed</h2>
+        <p class="lead">All lives lost.</p>
+        <div class="final">
+          <div><span>Score</span><b id="finalScore">0</b></div>
+          <div><span>Ships docked</span><b id="finalDocked">0</b></div>
+          <div><span>Time</span><b id="finalTime">0:00</b></div>
+        </div>
+        <p id="newBest" class="best hidden">New high score!</p>
+        <button id="restartBtn" class="big">Restart</button>
+      </div>
+    </section>
+  </div>
+
+  <div id="sel" class="sel">Select a ship to begin.</div>
+
+  <footer class="controls">
+    <div class="group"><button id="shipPrev" title="Previous ship (W / ↑)">▲ Ship</button><button id="shipNext" title="Next ship (S / ↓)">▼ Ship</button></div>
+    <div class="group"><button id="dockPrev" title="Previous dock (A / ←)">◀ Dock</button><button id="dockNext" title="Next dock (D / →)">Dock ▶</button></div>
+    <button id="assignBtn" class="assign" title="Enter">Assign</button>
+    <button id="pauseBtn" title="Space">Pause</button>
+  </footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

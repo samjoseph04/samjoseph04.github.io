@@ -1,0 +1,3 @@
+# For an explicitly configured local Worker session only. Never commit .dev.vars.
+# Production: set GITHUB_TOKEN through `wrangler secret put GITHUB_TOKEN`.
+GITHUB_TOKEN=replace_locally_never_commit_a_real_token

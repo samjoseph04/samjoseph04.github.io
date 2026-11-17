@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#070812">
+<title>Number Rush</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <div class="bg-grid"></div>
+  <div class="scan"></div>
+
+  <header class="topbar">
+    <div class="brand"><i></i> NUMBER RUSH</div>
+    <button id="soundBtn" class="icon-btn">🔊</button>
+  </header>
+
+  <section class="hud">
+    <div class="stat"><span>Next</span><b id="next">1</b></div>
+    <div class="stat"><span>Score</span><b id="score">0</b></div>
+    <div class="stat"><span>Time</span><b id="time">0.00</b></div>
+    <div class="stat"><span>Best</span><b id="best">0</b></div>
+  </section>
+
+  <section id="startScreen" class="center-screen">
+    <div class="eyebrow">SPEED & PRECISION</div>
+    <h1>NUMBER<br><em>RUSH</em></h1>
+    <p>Click the numbers in ascending order.<br>Don't miss. Don't hesitate.</p>
+    <button id="startBtn" class="primary">START RUSH</button>
+    <small>MOUSE • TOUCH • KEYBOARD</small>
+  </section>
+
+  <section id="gameScreen" class="game-screen hidden">
+    <div class="game-head">
+      <div>
+        <b id="levelLabel">ROUND 01</b>
+        <span id="instruction">Find number 1</span>
+      </div>
+      <div class="progress"><i id="progress"></i></div>
+    </div>
+    <div id="numberGrid" class="number-grid"></div>
+    <div class="game-foot">
+      <span id="streak">STREAK 0</span>
+      <span id="mistakes">MISSES 0</span>
+      <span id="gridInfo">GRID 3×3</span>
+    </div>
+  </section>
+
+  <div id="gameOver" class="modal">
+    <div class="card">
+      <div class="eyebrow">RUSH COMPLETE</div>
+      <h2 id="resultTitle">TIME'S UP</h2>
+      <div id="newBest"></div>
+      <div class="results">
+        <div><span>Score</span><b id="finalScore">0</b></div>
+        <div><span>Time</span><b id="finalTime">0.00s</b></div>
+        <div><span>Best</span><b id="finalBest">0</b></div>
+        <div><span>Misses</span><b id="finalMisses">0</b></div>
+      </div>
+      <button id="restartBtn" class="primary">PLAY AGAIN</button>
+    </div>
+  </div>
+  <div id="flash"></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

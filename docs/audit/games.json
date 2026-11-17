@@ -1,0 +1,690 @@
+{
+  "auditDate": "2026-11-12",
+  "sourceRepository": "samjoseph04/samjoseph04.github.io",
+  "sourceRevision": "ebe62ed0b9d51656a1fb72277c1f1d1188c0ec7b",
+  "verification": "HTTP reachability and byte integrity; not a complete gameplay test",
+  "games": [
+    {
+      "id": "archery",
+      "name": "Archery",
+      "description": "Pull back, aim, and release — a precision challenge that tests your timing and steady hand.",
+      "category": "Reflex",
+      "tags": [
+        "Precision",
+        "Canvas"
+      ],
+      "destination": "/archery/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/archery/",
+      "documentTitle": "Archery"
+    },
+    {
+      "id": "bus-game",
+      "name": "Bus Game",
+      "description": "Navigate packed streets, pick up passengers on time, and dodge relentless city traffic.",
+      "category": "Arcade",
+      "tags": [
+        "Driving",
+        "Arcade"
+      ],
+      "destination": "/bus-game/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/bus-game/",
+      "documentTitle": "BUS! Counter Challenge"
+    },
+    {
+      "id": "clean-city",
+      "name": "Clean City",
+      "description": "Manage resources and clean up pollution — build the greenest, healthiest city you can.",
+      "category": "Strategy",
+      "tags": [
+        "Strategy",
+        "Simulation"
+      ],
+      "destination": "/clean-city/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/clean-city/",
+      "documentTitle": "Clean City"
+    },
+    {
+      "id": "color-maze",
+      "name": "Color Maze",
+      "description": "Match hues to unlock paths through a shifting labyrinth — fast reflexes, sharp logic.",
+      "category": "Puzzle",
+      "tags": [
+        "Puzzle",
+        "Maze"
+      ],
+      "destination": "/color-maze/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/color-maze/",
+      "documentTitle": "Color Maze"
+    },
+    {
+      "id": "dodge-the-blocks",
+      "name": "Dodge the Blocks",
+      "description": "Survive an endless storm of falling blocks — dodge, weave, and outlast them all.",
+      "category": "Reflex",
+      "tags": [
+        "Reflex",
+        "Survival"
+      ],
+      "destination": "/dodge-the-blocks/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/dodge-the-blocks/",
+      "documentTitle": "Dodge the Blocks"
+    },
+    {
+      "id": "drop",
+      "name": "Drop",
+      "description": "Time your releases to stack pieces perfectly and build the tallest tower possible.",
+      "category": "Casual",
+      "tags": [
+        "Timing",
+        "Casual"
+      ],
+      "destination": "/drop/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/drop/",
+      "documentTitle": "Drop"
+    },
+    {
+      "id": "echo",
+      "name": "Echo",
+      "description": "Listen carefully, then repeat the audio sequence — each round adds one more beat.",
+      "category": "Puzzle",
+      "tags": [
+        "Memory",
+        "Audio"
+      ],
+      "destination": "/echo/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/echo/",
+      "documentTitle": "Echo"
+    },
+    {
+      "id": "glow",
+      "name": "Glow",
+      "description": "Trace neon patterns in sync with the rhythm — a hypnotic visual and tactile treat.",
+      "category": "Casual",
+      "tags": [
+        "Rhythm",
+        "Neon"
+      ],
+      "destination": "/glow/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/glow/",
+      "documentTitle": "Glow"
+    },
+    {
+      "id": "harbour-control",
+      "name": "Harbour Control",
+      "description": "Guide ships into port safely, manage docking queues, and prevent maritime collisions.",
+      "category": "Strategy",
+      "tags": [
+        "Strategy",
+        "Management"
+      ],
+      "destination": "/harbour-control/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/harbour-control/",
+      "documentTitle": "Harbor Control"
+    },
+    {
+      "id": "memory-grid",
+      "name": "Memory Grid",
+      "description": "Watch the grid flash, then recreate the pattern — each round harder than the last.",
+      "category": "Puzzle",
+      "tags": [
+        "Memory",
+        "Puzzle"
+      ],
+      "destination": "/memory-grid/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/memory-grid/",
+      "documentTitle": "Memory Grid"
+    },
+    {
+      "id": "neon-reflex",
+      "name": "Neon Reflex",
+      "description": "React to flashing neon cues before they vanish — the ultimate reaction-speed test.",
+      "category": "Reflex",
+      "tags": [
+        "Reflex",
+        "Neon"
+      ],
+      "destination": "/neon-reflex/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/neon-reflex/",
+      "documentTitle": "Neon Reflex"
+    },
+    {
+      "id": "number-rush",
+      "name": "Number Rush",
+      "description": "Tap numbers in the correct order against the clock — speed and accuracy both count.",
+      "category": "Arcade",
+      "tags": [
+        "Speed",
+        "Arcade"
+      ],
+      "destination": "/number-rush/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/number-rush/",
+      "documentTitle": "Number Rush"
+    },
+    {
+      "id": "reaction",
+      "name": "Reaction",
+      "description": "Wait for the signal, then click as fast as humanly possible — a pure reflex benchmark.",
+      "category": "Reflex",
+      "tags": [
+        "Reflex",
+        "Speed"
+      ],
+      "destination": "/reaction/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/reaction/",
+      "documentTitle": "React — Reaction Test"
+    },
+    {
+      "id": "slidensolve",
+      "name": "Slide n Solve",
+      "description": "Slide tiles into place to restore a scrambled image — a classic puzzle, reimagined.",
+      "category": "Puzzle",
+      "tags": [
+        "Puzzle",
+        "Classic"
+      ],
+      "destination": "/slidensolve/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/slidensolve/",
+      "documentTitle": "Slide & Solve"
+    },
+    {
+      "id": "stack",
+      "name": "Stack",
+      "description": "Stack blocks with split-second timing and build the tallest tower you can manage.",
+      "category": "Casual",
+      "tags": [
+        "Timing",
+        "Casual"
+      ],
+      "destination": "/stack/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/stack/",
+      "documentTitle": "Stack"
+    },
+    {
+      "id": "traffic",
+      "name": "Traffic",
+      "description": "Control signals at chaotic intersections to keep the city moving and avoid gridlock.",
+      "category": "Strategy",
+      "tags": [
+        "Strategy",
+        "Management"
+      ],
+      "destination": "/traffic/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/traffic/",
+      "documentTitle": "Traffic Control"
+    },
+    {
+      "id": "rally",
+      "name": "Rally",
+      "description": "A pong-style game against the computer. The first to 7 points wins.",
+      "category": "Arcade",
+      "tags": [
+        "Timing",
+        "Casual",
+        "Reflex"
+      ],
+      "destination": "/rally/",
+      "httpStatus": 200,
+      "checkedUrl": "https://samjoseph.me/rally/",
+      "documentTitle": "Rally"
+    }
+  ],
+  "files": [
+    {
+      "path": "archery/index.html",
+      "sourceGitSha": "2329a01a878079bd816fa9ae72bfc1cda8068a11",
+      "sha256": "b4e4e5840f01a3f1fa653368e959a617d05e579a98213c53cb3ca089c22502e2",
+      "bytes": 788,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/archery/index.html"
+    },
+    {
+      "path": "archery/script.js",
+      "sourceGitSha": "6d081025c43b86ec681764d87d559aa91f491fc3",
+      "sha256": "3c7da8a7a0d4929547b80b90baf1b56b63296f5d552760351ec7ce58bc251077",
+      "bytes": 9928,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/archery/script.js"
+    },
+    {
+      "path": "archery/style.css",
+      "sourceGitSha": "57942524f509b1a65cb4d80f5474f6aaa67568b8",
+      "sha256": "f1368bc609126eebd8d016abcb29c8870983a577c9dfa035854cd73295613066",
+      "bytes": 1959,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/archery/style.css"
+    },
+    {
+      "path": "bus-game/index.html",
+      "sourceGitSha": "b4ba6e3759508ea9a3ffb171a3fb73bf07266c7b",
+      "sha256": "e1c37a349cff8812ee8377b803edfd74d95d8becbe0dd9cda78316a8c0b94ba7",
+      "bytes": 3095,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/bus-game/index.html"
+    },
+    {
+      "path": "bus-game/script.js",
+      "sourceGitSha": "09558e77a1731d53f990889abc237789c0affd00",
+      "sha256": "eac87d90cb1f2ad5d3db51aa151caebb9bc67f2dac6fae75d28e781effea311d",
+      "bytes": 6782,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/bus-game/script.js"
+    },
+    {
+      "path": "bus-game/style.css",
+      "sourceGitSha": "a198af5fbd7281f574e87962598b37231ec2f279",
+      "sha256": "3852cc6d95511f5168988c5740ac355a1db93407bc697696aa04b2b94ba949af",
+      "bytes": 6987,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/bus-game/style.css"
+    },
+    {
+      "path": "clean-city/game.js",
+      "sourceGitSha": "021573166a4550b58467791886813c432ea792fe",
+      "sha256": "4e0559a2441e691efbeea542658ef943a53b3bfeda832537eed0d86918cdf117",
+      "bytes": 6185,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/clean-city/game.js"
+    },
+    {
+      "path": "clean-city/index.html",
+      "sourceGitSha": "037708b8e0e1906ed877f93fb9308f774ab8b77c",
+      "sha256": "b069cb57cee7ad987f77e674f4f50b25afd876a4641ff33cee99fdf905f0b2d7",
+      "bytes": 1121,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/clean-city/index.html"
+    },
+    {
+      "path": "clean-city/style.css",
+      "sourceGitSha": "cacdd1a9fc322d58facc10678b0db66552ed15ca",
+      "sha256": "a8b4c9a0db53deb659acceca9c4d9746958a574e520e77fcc5cc8a9d43bbccce",
+      "bytes": 2173,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/clean-city/style.css"
+    },
+    {
+      "path": "color-maze/index.html",
+      "sourceGitSha": "e3b8207adbed02abfc9905443f112d5ec76f40e5",
+      "sha256": "9875c6017034f18690ea2b1eca07911b004d750767e362e4c39fabd33836293a",
+      "bytes": 1774,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/color-maze/index.html"
+    },
+    {
+      "path": "color-maze/script.js",
+      "sourceGitSha": "384bcbc3c5c09737487e42259288085149c22a53",
+      "sha256": "608a3acf4a62622555c008d75b2800804fab0f8fe2f61ce910092f00de272401",
+      "bytes": 5431,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/color-maze/script.js"
+    },
+    {
+      "path": "color-maze/style.css",
+      "sourceGitSha": "4de57d746ad25fbb9d07303805d1d1bd48f19c30",
+      "sha256": "81bf3c7ca5b1d8fdd4d209cf6237b98410f55eac90050288662e5f3be85eac35",
+      "bytes": 5222,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/color-maze/style.css"
+    },
+    {
+      "path": "dodge-the-blocks/index.html",
+      "sourceGitSha": "ec51f558ff6c9f606bc605fb46adc7e4f56394b4",
+      "sha256": "02974542c9c47f1cd61c564b10072a8c13879c6a9fa7e34f32ac3d8c7596c602",
+      "bytes": 14882,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/dodge-the-blocks/index.html"
+    },
+    {
+      "path": "drop/index.html",
+      "sourceGitSha": "b1abb2df267bb8393460679ac68de8ef2adc2eaa",
+      "sha256": "5529458cebf282da87fb6ea0f29dda51c32d3bdc617c8065fd7ea5d16e99fdd1",
+      "bytes": 612,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/drop/index.html"
+    },
+    {
+      "path": "drop/script.js",
+      "sourceGitSha": "f87c5d649476b9756c7ea26373f528beb1d476e6",
+      "sha256": "02365b6ed0798331df3c0cf896bc170365fb590f2ed9d8a9d7da055326dc277a",
+      "bytes": 6254,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/drop/script.js"
+    },
+    {
+      "path": "drop/style.css",
+      "sourceGitSha": "2ad3f8fc483124f5e326061fddbe9d51800a9cae",
+      "sha256": "80bc36b8c5f99bf51e2541713723376f2d1adc5a566527a5e7d29da7038cf9fe",
+      "bytes": 1713,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/drop/style.css"
+    },
+    {
+      "path": "echo/index.html",
+      "sourceGitSha": "11547a052813441dbc7447a7aee67a383d74027e",
+      "sha256": "73633919a20fab20c8430ccc734a693290da8517a0b1b749d4fc45bd6ae62343",
+      "bytes": 1032,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/echo/index.html"
+    },
+    {
+      "path": "echo/script.js",
+      "sourceGitSha": "a6b40b827d40052103272eeeb01fa62e7cf5ac25",
+      "sha256": "9583980a78220c64f8d5ca885fc4cf630c61779cfd3f655d4e1f27d9969f7bce",
+      "bytes": 4488,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/echo/script.js"
+    },
+    {
+      "path": "echo/style.css",
+      "sourceGitSha": "12a5362e96922848b7d0d3e5bad57d450b235f4e",
+      "sha256": "6dc94100f826c5fc8338d1a82742395cd2cc1201a2d292850f3a23a4a90f3f17",
+      "bytes": 2255,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/echo/style.css"
+    },
+    {
+      "path": "glow/index.html",
+      "sourceGitSha": "70929d339679a4e11dbda281770aaf24b75f659d",
+      "sha256": "9b184239ce96b99e9100c1acb2905a939aa707b95ab7c75bff71e1678672aa01",
+      "bytes": 925,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/glow/index.html"
+    },
+    {
+      "path": "glow/script.js",
+      "sourceGitSha": "029dc121ce89a1700985c40cd47816b87485beb7",
+      "sha256": "314f13b5ebf3cba57524dd222bed7cc9eb54a98884d140747f486a0aa4952467",
+      "bytes": 4547,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/glow/script.js"
+    },
+    {
+      "path": "glow/style.css",
+      "sourceGitSha": "1c9e418857e065e4f4b93256c0d50cc13a79593f",
+      "sha256": "1287364d6eca786a8c423b95c7e22643f69685d736a128df87ea54b1a10af9c0",
+      "bytes": 2290,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/glow/style.css"
+    },
+    {
+      "path": "harbour-control/index.html",
+      "sourceGitSha": "876ffc6536efd9e9b3decbdebfd6aebf3a594c10",
+      "sha256": "f4ca7d557e4ef9bd8ac0555d647548132632ad90ef810de98f51ed6385f4f43a",
+      "bytes": 2919,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/harbour-control/index.html"
+    },
+    {
+      "path": "harbour-control/script.js",
+      "sourceGitSha": "ac62b7ba4c211a24dcc4caa01b62e57634392bec",
+      "sha256": "05551655cf67d6e72a516d1e85192ffcca0c786002c1e2aa2a0d239ee5d03e1a",
+      "bytes": 13982,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/harbour-control/script.js"
+    },
+    {
+      "path": "harbour-control/style.css",
+      "sourceGitSha": "3f5164cbd6f372684b756d28294eb961824dbd9f",
+      "sha256": "972d77ea8be10a36aed6e66388165d8e1a1c4f6156b973311af5e7303a8f6c5c",
+      "bytes": 3074,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/harbour-control/style.css"
+    },
+    {
+      "path": "memory-grid/index.html",
+      "sourceGitSha": "fb9de7d879a7b214f0e9508828caddab839d0bb8",
+      "sha256": "c8f42a0ffdf09f605672bed5d3537d44a3405aaf550ecd3a8c076e3b6dbd51e2",
+      "bytes": 1908,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/memory-grid/index.html"
+    },
+    {
+      "path": "memory-grid/script.js",
+      "sourceGitSha": "050ef111ce8663a91ffabcc0df33909698053568",
+      "sha256": "345697504198e8fe333e1dd8e9c1d0c491247e68eba21c3fda9bb640edea573b",
+      "bytes": 5456,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/memory-grid/script.js"
+    },
+    {
+      "path": "memory-grid/style.css",
+      "sourceGitSha": "d579d2dbfb27c5399b25f3244ea00dbfe7efba8d",
+      "sha256": "e694cce1a8d0094edf2caf822c2a8c310c39a195770de5561104f9e1bac9a5d5",
+      "bytes": 7206,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/memory-grid/style.css"
+    },
+    {
+      "path": "neon-reflex/index.html",
+      "sourceGitSha": "c99378eca0f2926fae633ed6eb382c2d5bedb5c3",
+      "sha256": "b6a8a3863dc2320974bdbf51af2288bbd82c7dd65815bc5445f57144d83c6800",
+      "bytes": 1939,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/neon-reflex/index.html"
+    },
+    {
+      "path": "neon-reflex/script.js",
+      "sourceGitSha": "fbab382a9512d20e128bbe4cc6790c664fa41ad7",
+      "sha256": "067b87f7efd39064d75fcb7af4acbd5edf32322ac363022c3d6828f5a911f85b",
+      "bytes": 7667,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/neon-reflex/script.js"
+    },
+    {
+      "path": "neon-reflex/style.css",
+      "sourceGitSha": "a00cb7a88236173d706820027579a847897dfd45",
+      "sha256": "7e7fb1b58044365c9a75f01e17fd4be41e077fbf7af4adef9780590fd1a7b62c",
+      "bytes": 7941,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/neon-reflex/style.css"
+    },
+    {
+      "path": "number-rush/index.html",
+      "sourceGitSha": "9256860d6ac92ec23316117f31a420cb161269dc",
+      "sha256": "9dd2cfe075c422c21b17e94d2817e1192396c4f49c9b00c51af58b52990b4645",
+      "bytes": 2285,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/number-rush/index.html"
+    },
+    {
+      "path": "number-rush/script.js",
+      "sourceGitSha": "ad2a2a29253314fd2ceaceab14e2c11eec0b7080",
+      "sha256": "a7d7a7492d7fe05083251a10256d22c79e1712f5fdff1fffbdfe7e3112db8d60",
+      "bytes": 5930,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/number-rush/script.js"
+    },
+    {
+      "path": "number-rush/style.css",
+      "sourceGitSha": "bb63f646ee67735c15bc6ff352ed7c2672d4b026",
+      "sha256": "26f9f08c1b716526375b4eb706140ac85d1b1482f6f58dd60fa44d1f905845b3",
+      "bytes": 7535,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/number-rush/style.css"
+    },
+    {
+      "path": "rally/index.html",
+      "sourceGitSha": "87a9daf8b3c49c407091e170b066581fe38074a9",
+      "sha256": "98301f57b98932ffb7abc4a2dbc408956d35cf231151145a59d06cf12e170704",
+      "bytes": 700,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/rally/index.html"
+    },
+    {
+      "path": "rally/script.js",
+      "sourceGitSha": "b0bc899f7e263852fc1260bcabd3750d6a6df818",
+      "sha256": "7c4fca0db8f25a71ff3a4b6b85f06bfa4870206dfca776242f39453b7e92a062",
+      "bytes": 8391,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/rally/script.js"
+    },
+    {
+      "path": "rally/style.css",
+      "sourceGitSha": "bacc195db2ea83b0dbd323c841d86ce55b714803",
+      "sha256": "163a8c84bf8fb8338ead19bb8867632cfd7458de4dd67bc7f26476bb279fe7d4",
+      "bytes": 2229,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/rally/style.css"
+    },
+    {
+      "path": "reaction/index.html",
+      "sourceGitSha": "0c72140b001074fea98a6b7be1b9e649fa974b9e",
+      "sha256": "5ce7a0382a6c30b5521913b2b97be8f0a2deaaf4920352b96a7c2cf886090b2b",
+      "bytes": 1387,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/reaction/index.html"
+    },
+    {
+      "path": "reaction/script.js",
+      "sourceGitSha": "007a8f125f3fbcf521f5a3c4804c7ab737b121b7",
+      "sha256": "7523760b1aa6d793a6a87240cdb80339a9566fb2cfee51bc4de6acb73113d1ba",
+      "bytes": 4337,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/reaction/script.js"
+    },
+    {
+      "path": "reaction/styles.css",
+      "sourceGitSha": "0d0b735fb238e4f6a02e996675a72146ebc7ffb4",
+      "sha256": "98b0d16ab13f0e90e58afd475d10dafec8fe1e55126d2b6c0f77c0dca0a48d97",
+      "bytes": 4052,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/reaction/styles.css"
+    },
+    {
+      "path": "slidensolve/index.html",
+      "sourceGitSha": "808a6e9ee8b97430fdf0922a92ed53c72c7e66aa",
+      "sha256": "f97f600c70a6f81a6b9955a8418a67adf8a1c4a4c58b6ad1d43d5ea1594e0e30",
+      "bytes": 4539,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/slidensolve/index.html"
+    },
+    {
+      "path": "slidensolve/script.js",
+      "sourceGitSha": "166177d8b4e3467a03c2f20b7a386ca3b6a97129",
+      "sha256": "4977c155e0fb64c14457e89914d57fbd67f7890028806f7fbbeb21a3d3500ef3",
+      "bytes": 13495,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/slidensolve/script.js"
+    },
+    {
+      "path": "slidensolve/style.css",
+      "sourceGitSha": "f79fafeb05967bb56eb41c378857ae89498180c2",
+      "sha256": "8371f6c745de6cc235f6803336f00a54a412e8c38a5b87095d09a3d1baec525c",
+      "bytes": 11850,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/slidensolve/style.css"
+    },
+    {
+      "path": "stack/index.html",
+      "sourceGitSha": "d842f9dfadfbbb2894f9848a25bdcbf1d0c63b57",
+      "sha256": "55e45d047ad3e36559f367cebedccaaf8212f2e7425b91062e41cc00a3f0686d",
+      "bytes": 524,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/stack/index.html"
+    },
+    {
+      "path": "stack/script.js",
+      "sourceGitSha": "3d15df9a0a0272f372cde8c6a3bfc83046590851",
+      "sha256": "300abefb7385bfadec17a4de8f9ea7bd5e042cfa17376713b55d615fbf6ea8b0",
+      "bytes": 4068,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/stack/script.js"
+    },
+    {
+      "path": "stack/style.css",
+      "sourceGitSha": "7ce4d5433ddb35a26a81d6c8e88bb36a13711175",
+      "sha256": "4acddb0ac9205288f7fd068acf9d61c3f133e7ab9a0bd845219f7aef34c7f3dc",
+      "bytes": 1719,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/stack/style.css"
+    },
+    {
+      "path": "traffic/index.html",
+      "sourceGitSha": "f2ecec8d09d12dccae7538a1d2ffd9f0ec756f41",
+      "sha256": "15715e1ac73dd117a6fe881cca61a9bca48c4e46280211ae908cfe58da9a77a5",
+      "bytes": 2326,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/traffic/index.html"
+    },
+    {
+      "path": "traffic/script.js",
+      "sourceGitSha": "636d2c72281aaef30154decdfe6d0eed7b4f999e",
+      "sha256": "6d3a012373f54d16324b34fdba7310ecb935225398529fcd8e35102283ff9e37",
+      "bytes": 13157,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/traffic/script.js"
+    },
+    {
+      "path": "traffic/style.css",
+      "sourceGitSha": "986d401265f3b3034325d39df07374c2daf42022",
+      "sha256": "c9dcf1560f9369db7da25d39a33913e50de8aae5cbd217bd29b9401c471100da",
+      "bytes": 3247,
+      "liveStatus": 200,
+      "liveMatchesSource": true,
+      "liveUrl": "https://samjoseph.me/traffic/style.css"
+    }
+  ]
+}
