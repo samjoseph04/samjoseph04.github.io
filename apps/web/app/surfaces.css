@@ -1,0 +1,17 @@
+/* Every section returns to the same deep endpoint. All blends are horizontal. */
+.portfolio-root .section-surface {
+  --section-background: var(--tone-deep);
+  position: relative;
+  isolation: isolate;
+  color: var(--paper);
+  color-scheme: var(--theme-scheme);
+  background: linear-gradient(180deg,
+    var(--tone-deep) 0%,
+    color-mix(in srgb, var(--tone-deep) 85%, var(--tone-surface)) 50%,
+    var(--tone-deep) 100%);
+}
+/* The portrait-led hero shares the surrounding deep background at its sides. */
+.portfolio-root .hero { background: var(--tone-deep); }
+.portfolio-root .section-surface + .section-surface {
+  box-shadow: 0 -1px 0 var(--tone-deep);
+}

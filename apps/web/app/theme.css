@@ -1,0 +1,106 @@
+/* Intentional palettes, not inversion. Interpolate a single registered number,
+   so colors AND gradients transition together without overriding hover motion. */
+@property --theme-progress {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+:root {
+  --dark-background: #070100;
+  --dark-surface: #1E1817;
+  --dark-muted: #70726D;
+  --dark-text: #D1CDC8;
+  --light-background: #EAE6E0;
+  --light-surface: #D8D1C9;
+  --light-muted: #706B65;
+  --light-text: #171311;
+  --theme-progress: 0;
+  --theme-scheme: dark;
+  --theme-dark-weight: calc((1 - var(--theme-progress)) * 100%);
+  --tone-deep: color-mix(in srgb, var(--dark-background) var(--theme-dark-weight), var(--light-background));
+  --tone-surface: color-mix(in srgb, var(--dark-surface) var(--theme-dark-weight), var(--light-surface));
+  --tone-secondary: color-mix(in srgb, var(--dark-muted) var(--theme-dark-weight), var(--light-muted));
+  --tone-paper: color-mix(in srgb, var(--dark-text) var(--theme-dark-weight), var(--light-text));
+  --paper: var(--tone-paper);
+  --ink: var(--tone-deep);
+  --text-on-dark: var(--tone-paper);
+  --text-muted-dark: color-mix(in srgb, var(--tone-paper) 45%, var(--tone-secondary));
+  --muted: var(--text-muted-dark);
+  --line: color-mix(in srgb, var(--tone-secondary) 55%, transparent);
+  --border-dark: var(--tone-secondary);
+  --surface-raised: var(--tone-surface);
+  --surface-hover: color-mix(in srgb, var(--tone-surface) 90%, var(--tone-deep));
+  --grid-line: color-mix(in srgb, var(--tone-secondary) 22%, var(--tone-deep));
+  --shadow: color-mix(in srgb, var(--dark-background) 28%, transparent);
+  --light-wash: color-mix(in srgb, var(--tone-surface) 65%, transparent);
+  --accent-link: var(--tone-paper);
+  --accent-detail: var(--tone-paper);
+  --control-fill: linear-gradient(180deg, var(--tone-surface), var(--tone-deep));
+}
+body, .portfolio-root { background: var(--tone-deep); color: var(--paper); }
+.portfolio-root .site-header {
+  background: linear-gradient(180deg, var(--tone-deep), color-mix(in srgb, var(--tone-deep) 75%, var(--tone-surface)) 50%, var(--tone-deep));
+}
+.portfolio-root :is(.nav-contact, .arcade-search, .mobile-nav, .arcade-card, .coursework-panel) {
+  background: var(--control-fill);
+  color: var(--paper);
+}
+.portfolio-root .arcade-card:hover {
+  background: linear-gradient(180deg, var(--tone-surface), var(--surface-hover));
+}
+.portfolio-root :is(.button-light, .about-section .button-light, .arcade-filter-active) {
+  background: var(--control-fill);
+  color: var(--paper);
+}
+.portfolio-root .arcade-search input::placeholder { color: var(--muted); opacity: 1; }
+.portfolio-root .arcade-filter-count { opacity: 1; }
+.portrait-tone {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--dark-surface) 18%, transparent);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+:root[data-theme='light'] {
+  --theme-progress: 1;
+  --theme-scheme: light;
+}
+html[data-theme-ready] {
+  transition: --theme-progress 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--paper);
+  background: var(--control-fill);
+}
+.theme-toggle:hover { border-color: var(--tone-secondary); }
+.theme-toggle-icons { position: relative; display: block; width: 18px; height: 18px; }
+.portfolio-root .theme-toggle .theme-toggle-icons svg { position: absolute; inset: 0; transition: opacity 0.2s ease; }
+.theme-sun { opacity: 0; }
+:root[data-theme='light'] .theme-sun { opacity: 1; }
+:root[data-theme='light'] .theme-moon { opacity: 0; }
+/* Native color scheme follows the explicit choice, not the OS preference. */
+:root { color-scheme: var(--theme-scheme); }
+@media (max-width: 800px) and (min-width: 561px) {
+  .portfolio-root .navigation { gap: 10px; }
+  .portfolio-root .desktop-nav { gap: 12px; }
+  .portfolio-root .nav-contact { padding-inline: 10px; gap: 10px; }
+}
+@media (max-width: 560px) {
+  .portfolio-root .navigation { gap: 6px; }
+  .portfolio-root .wordmark { gap: 6px; }
+  .portfolio-root .nav-contact { padding-inline: 6px; gap: 6px; font-size: 9px; }
+  .portfolio-root .menu-button { padding-inline: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme-ready] { transition: none; }
+  .portfolio-root .theme-toggle .theme-toggle-icons svg { transition: none; }
+}

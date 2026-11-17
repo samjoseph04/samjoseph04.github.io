@@ -1,0 +1,22 @@
+.portfolio-root :focus-visible { outline-color: var(--accent-link); }
+.portfolio-root ::selection { background: var(--tone-surface); color: var(--paper); }
+.portfolio-root .utility-dot,
+.portfolio-root .sound-toggle[aria-pressed='true'] svg { color: var(--paper); }
+.portfolio-root .utility-dot { background: var(--tone-secondary); }
+.portfolio-root .nav-contact,
+.portfolio-root .round-icon { border-color: var(--border-dark); }
+.portfolio-root .desktop-nav a::after { background: var(--paper); }
+.portfolio-root .round-icon { color: var(--paper); }
+.portfolio-root .round-link:hover .round-icon { background: var(--control-fill); color: var(--paper); }
+.portfolio-root .button:hover { background: var(--control-fill); color: var(--paper); border-color: var(--tone-secondary); }
+.portfolio-root .about-section .button:hover { background: linear-gradient(180deg, var(--tone-surface), var(--tone-deep)); color: var(--paper); border-color: var(--tone-secondary); }
+.portfolio-root .project-actions > a,
+.portfolio-root .tags > span { border-color: var(--line); }
+.portfolio-root .education-chevron,
+.portfolio-root .education-details[open] .coursework-cue { color: var(--accent-detail); }
+@media (hover: hover) and (pointer: fine) {
+  .portfolio-root .nav-contact:hover { background: var(--tone-surface); color: var(--paper); }
+  .portfolio-root :is(.text-link,.project-actions > a,.desktop-nav a,.mobile-nav a):hover { color: var(--accent-link); }
+  .portfolio-root .case-study summary:hover,
+  .portfolio-root .education-details > summary:hover h3 { color: var(--muted); }
+}

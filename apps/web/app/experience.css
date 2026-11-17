@@ -1,0 +1,41 @@
+.site-utilities {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  font-size: 10px;
+  letter-spacing: 0.09em;
+}
+.india-clock,
+.sound-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+.india-clock time {
+  font-variant-numeric: tabular-nums;
+  min-width: 8ch;
+}
+.utility-muted {
+  color: var(--muted);
+}
+.utility-dot {
+  width: 4px;
+  height: 4px;
+  background: var(--paper);
+  border-radius: 50%;
+}
+.sound-toggle {
+  min-height: 44px;
+  padding: 10px 0 10px 16px;
+  color: var(--muted);
+  cursor: pointer;
+}
+.sound-toggle span {
+  color: var(--paper);
+  min-width: 3ch;
+  text-align: right;
+}
+.sound-toggle[aria-pressed='true'] svg {
+  color: var(--paper);
+}

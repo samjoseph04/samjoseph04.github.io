@@ -1,0 +1,19 @@
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#eef0ea;--ink:#1d2a27;--mute:#7a8782;--l:58%}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14191a;--ink:#e6ece8;--mute:#74817c;--l:64%}}
+:root[data-theme="dark"]{--bg:#14191a;--ink:#e6ece8;--mute:#74817c;--l:64%}
+*,*:before,*:after{box-sizing:inherit}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Avenir Next",Avenir,"Segoe UI",system-ui,sans-serif;overflow:hidden;
+  -webkit-user-select:none;user-select:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+#stage{position:relative;height:100%;display:flex;justify-content:center;cursor:pointer}
+canvas{height:100%;max-width:100%;aspect-ratio:3/5;display:block}
+.hud{position:absolute;top:6%;left:0;right:0;text-align:center;pointer-events:none}
+#score{font-size:clamp(64px,16vmin,120px);font-weight:200;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+#best{margin-top:8px;font-size:13px;color:var(--mute);letter-spacing:.04em}
+#msg{position:absolute;left:0;right:0;bottom:11%;text-align:center;pointer-events:none;color:var(--mute);font-size:15px;transition:opacity .25s}
+#msg b{display:block;color:var(--ink);font-weight:500;font-size:20px;margin-bottom:6px}
+#perfect{position:absolute;left:0;right:0;top:27%;text-align:center;font-size:15px;letter-spacing:.08em;color:var(--mute);opacity:0;pointer-events:none}
+#perfect.show{animation:pf .7s ease-out}
+@keyframes pf{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-14px)}}
+@media (prefers-reduced-motion:reduce){#perfect.show{animation:none;opacity:1}}

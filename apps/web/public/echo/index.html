@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Echo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="hud">
+    <div id="score">0</div>
+    <div id="best"></div>
+  </div>
+  <p id="status" role="status">Watch the pattern, then repeat it</p>
+  <div class="grid">
+    <button class="pad" style="--c:#2fa38f" aria-label="Pad 1 (key 1 or Q)"></button>
+    <button class="pad" style="--c:#e8665a" aria-label="Pad 2 (key 2 or W)"></button>
+    <button class="pad" style="--c:#e9b44c" aria-label="Pad 3 (key 3 or A)"></button>
+    <button class="pad" style="--c:#7b86e8" aria-label="Pad 4 (key 4 or S)"></button>
+  </div>
+  <div class="actions">
+    <button id="start" class="primary">Start</button>
+    <button id="sound" aria-label="Toggle sound">Sound on</button>
+  </div>
+  <p class="hint">Keys: 1 2 3 4 &nbsp;or&nbsp; Q W A S</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
