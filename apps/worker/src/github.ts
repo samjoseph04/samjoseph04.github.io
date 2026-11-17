@@ -19,7 +19,9 @@ export class PublishUncertain extends HttpError {
 export class GitHub {
   constructor(
     private config: GitHubConfig,
-    private transport: typeof fetch = fetch,
+    // Workers' native fetch requires its global receiver; do not store it as an
+    // instance method and invoke it with the GitHub adapter as `this`.
+    private transport: typeof fetch = (input, init) => globalThis.fetch(input, init),
   ) {}
   async call(path: string, method = 'GET', body?: unknown): Promise<any> {
     if (!this.config.GITHUB_TOKEN || this.config.GITHUB_BRANCH.includes('REPLACE_'))
