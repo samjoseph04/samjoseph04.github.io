@@ -21,6 +21,23 @@ const config = {
   GITHUB_BRANCH: 'master',
   GITHUB_TOKEN: 'TEST_ONLY_NOT_A_CREDENTIAL',
 };
+test('the default transport preserves the native Workers fetch receiver', async () => {
+  const originalFetch = globalThis.fetch;
+  let calls = 0;
+  globalThis.fetch = async function (this: unknown, input, init) {
+    assert.equal(this, globalThis, 'native fetch must receive the global scope');
+    assert.equal(new URL(String(input)).pathname, '/repos/owner/repo/git/ref/heads/master');
+    assert.equal(new Headers(init?.headers).get('Authorization'), `Bearer ${config.GITHUB_TOKEN}`);
+    calls++;
+    return Response.json({ object: { sha: base } });
+  };
+  try {
+    assert.equal((await new GitHub(config).head()).object.sha, base);
+    assert.equal(calls, 1);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
 test('publishing creates an atomic content/assets tree and non-forced commit without writing arbitrary paths', async () => {
   const calls: { path: string; method: string; body: any }[] = [];
   const transport = async (url: string | URL | Request, options?: RequestInit) => {

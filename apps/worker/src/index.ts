@@ -318,6 +318,15 @@ export default {
           400,
         );
       if (error instanceof HttpError) return json({ error: error.message }, error.status);
+      // Log only a fixed classification: transport errors can contain credentials.
+      const failureCode = error instanceof Error && /Illegal invocation/i.test(error.message)
+        ? 'INVALID_RECEIVER'
+        : error instanceof TypeError && /header/i.test(error.message)
+          ? 'INVALID_HEADER'
+          : error instanceof Error && /D1_ERROR|D1_EXEC_ERROR/i.test(error.message)
+            ? 'DATABASE_ERROR'
+            : 'UNEXPECTED_ERROR';
+      console.error('portfolio_worker_failure', failureCode);
       return json(
         {
           error:
