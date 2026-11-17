@@ -1,6 +1,6 @@
 # Sam Joseph — portfolio & private studio
 
-Local implementation of the master brief. Nothing has been pushed, published, or deployed. The intended future repository is `samjoseph04/samjoseph04.github.io`.
+Public portfolio: https://samjoseph.me/ — deployed through GitHub Actions from `main` in `samjoseph04/samjoseph04.github.io` on 17 November 2026. The legacy `master` branch remains available for rollback. The separate private admin is not live yet; Cloudflare Access, storage, DNS and the dedicated publishing secret still require completion.
 
 Read [PROJECT_BRIEF.md](PROJECT_BRIEF.md) for requirements, audited content, decisions, and the implementation plan; [AGENTS.md](AGENTS.md) records repository rules. See [docs/SETUP.md](docs/SETUP.md) for future cloud configuration and [docs/VERIFICATION.md](docs/VERIFICATION.md) for verification and limitations.
 

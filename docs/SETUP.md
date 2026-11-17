@@ -1,11 +1,11 @@
-# Future configuration — no deployment performed
+# Hosting configuration and remaining admin setup
 
-The user's current instruction is local-only. The following steps are documentation for an owner-authorized future setup. No resources, credentials, remotes, DNS records, Pages settings, Access policies, or live branches were created or changed in this task.
+Hosting was authorized on 17 November 2026. The public site is deployed at https://samjoseph.me/ from main using the existing Pages workflow, with PORTFOLIO_DEPLOY_BRANCH=main and HTTPS enforcement enabled. The legacy master branch remains unchanged for rollback. The private admin is not deployed; Cloudflare/registrar setup below remains pending.
 
 ## Public repository and Pages
 
-1. Use `samjoseph04/samjoseph04.github.io`. The audited remote `master` has the legacy site; `main` only had README.md. Confirm the real Pages source/branch in repository settings. Do not replace a branch or history blindly. Integrate these source files and preserve original game paths before changing hosting.
-2. The owner must authorize and perform the future Git push. The Worker needs this new project, `content/portfolio.json`, original public games/assets, and `.github/workflows/pages.yml` on the chosen deployment branch before its first content load.
+1. Use `samjoseph04/samjoseph04.github.io`. At the initial audit, master held the legacy site and main only had README.md. Main now contains this implementation; master still holds the legacy rollback. Confirm the real Pages source/branch in repository settings. Do not replace a branch or history blindly. Integrate these source files and preserve original game paths before changing hosting.
+2. The initial hosting push and merge have been authorized and completed. The Worker needs this new project, `content/portfolio.json`, original public games/assets, and `.github/workflows/pages.yml` on the chosen deployment branch before its first content load.
 3. Configure Pages source as **GitHub Actions**. Set repository Actions variable `PORTFOLIO_DEPLOY_BRANCH` to that exact branch. Without it, the workflow verifies/builds but deliberately skips deployment.
 4. Configure the `github-pages` environment to permit deployment from the selected branch. Keep any desired environment approval policy; a publish may wait for it.
 5. Keep the custom domain `samjoseph.me`, CNAME, .nojekyll, domain ownership verification, DNS and HTTPS configuration intact. Validate existing DNS through the owner's settings before any changes.
@@ -19,14 +19,14 @@ The separate React admin and `/api/*` are served from the **same private origin*
 
 Resume publishing uses the existing commit-triggered workflow: a replacement updates `apps/web/public/resume.pdf` and `content/portfolio.json` together, both covered by `pages.yml` push filters. The Worker secret named `GITHUB_TOKEN` must hold the configured PAT or supplied GitHub App installation token, not a workflow-issued Actions token. The deployment branch variable/environment requirements above still apply. No extra server or public Next.js API route is needed. `/api/resume` privately reports the repository version and last verified deployment, while `/api/asset` supports authenticated inline preview or attachment download at an exact commit. No D1 migration or new binding is required for resume metadata; it lives inside the existing validated content document.
 
-1. Choose the private hostname and configure it in Cloudflare. Its exact name is intentionally not invented here.
+1. The owner chose admin.samjoseph.me. Prepare its Cloudflare zone and preserve every existing Namecheap DNS record before changing nameservers. Wrangler is signed in, but browser-side Access/R2/zone setup is still pending.
 2. Provision D1 `portfolio-drafts` and a private R2 bucket `portfolio-private-uploads`. Disable public bucket access and public object URLs.
 3. Replace every `REPLACE_...` field in `apps/worker/wrangler.jsonc`: D1 ID, admin origin, Access team domain, Access application audience, and confirmed deployment branch. Repository owner/name are prefilled from the user's confirmation. Resource names may be changed consistently.
-4. Create a Cloudflare Access self-hosted application for the entire admin hostname, including `/api/*` and all static assets. Use an explicit owner identity/email allowlist. The real owner login is missing; do not substitute the example public email. No Bypass or Allow Everyone policy.
+4. Create a Cloudflare Access self-hosted application for the entire admin hostname, including `/api/*` and all static assets. Use an explicit owner identity/email allowlist. The owner explicitly confirmed sam.joseph04@gmail.com as the allowlisted sign-in identity. No Bypass or Allow Everyone policy.
 5. Configure Access and the custom route **before enabling traffic**. Leave `workers_dev: false` and `preview_urls: false`; do not expose alternate origins outside Access. `run_worker_first: true` verifies Access JWTs on every request, including static assets, as defense in depth.
 6. Set `GITHUB_TOKEN` exclusively through Cloudflare Worker secrets. Use the Cloudflare dashboard or, in a future authorized setup, `wrangler secret put GITHUB_TOKEN`. Never put its value in browser code, `VITE_*`, `NEXT_PUBLIC_*`, .env examples, source control, logs, screenshots, or chat.
 7. Apply `apps/worker/migrations/0001_drafts.sql` to the real D1 database. A local migration can be tested separately with `wrangler d1 migrations apply portfolio-drafts --local`; production setup requires the owner's real database configuration and explicit authorization.
-8. Build the admin (`npm run build -w @portfolio/admin`). Confirm `assets.directory` points at that bundle. Only then, after the owner authorizes deployment, deploy the Worker with its protected custom route.
+8. Build the admin (`npm run build -w @portfolio/admin`). Confirm `assets.directory` points at that bundle. After those prerequisites are verified, deploy the Worker with its protected custom route; hosting authorization is already present.
 9. Verify unsigned/expired/wrong-audience Access requests fail for `/`, bundle JS, content, uploads, asset previews, publish, recovery and deployment endpoints. Verify allowed owner login and logout in a real browser; keep a recovery route through the Cloudflare dashboard.
 
 ## API and publishing semantics
