@@ -62,7 +62,11 @@
       "category": "Mobile App Development",
       "description": "A minimal, offline-first personal expense tracking application built with Flutter. CoinFlow helps users record daily expenses quickly, monitor spending habits, and understand their expenses through a clean dashboard with daily totals, recent transactions, and category-based insights.",
       "technologies": [
-        "Flutter, Dart, Hive, Provider, intl"
+        "Flutter",
+        "Dart",
+        "Hive",
+        "Provider",
+        "intl"
       ],
       "problem": "Managing daily expenses can become difficult when users have to navigate complicated financial apps or depend on internet connectivity. There is a need for a simple and fast way to record expenses and keep track of daily spending.",
       "approach": "Developed CoinFlow using Flutter with an offline-first approach. Implemented a quick two-tap expense entry flow, local data persistence using Hive, and Provider for state management. Created a clean dashboard to display today's spending, recent expenses, and category-wise insights.",
@@ -77,6 +81,32 @@
       "repository": "https://github.com/samjoseph04/personal_money_tracker",
       "demo": "",
       "image": "/assets/d88db1ab-5dff-491a-bb5b-10f951127836.png"
+    },
+    {
+      "id": "securevault",
+      "title": "SecureVault – Secure File Encryption & Integrity Verification",
+      "category": "Cybersecurity / Python Web Application",
+      "description": "A web-based file security application that enables users to encrypt, decrypt, and verify file integrity. SecureVault uses AES-256-GCM encryption, Argon2id password-based key derivation, and SHA-256 hashing to protect files and detect unauthorized modifications.",
+      "technologies": [
+        "Python",
+        "Flask",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "AES-256-GCM",
+        "Argon2id",
+        "SHA-256",
+        "Pytest",
+        "Vercel"
+      ],
+      "problem": "Files stored or shared digitally can be exposed to unauthorized access or modified without the user's knowledge. There is a need for a simple solution that protects sensitive files and helps users verify their integrity.",
+      "approach": "Developed a Flask-based application with three core functionalities: file encryption, file decryption, and integrity verification. Implemented AES-256-GCM for authenticated encryption, Argon2id for password-based key derivation, and SHA-256 for generating and comparing file fingerprints. Added automated tests to validate the application's functionality and deployed it using Vercel.",
+      "learning": [
+        "Gained practical experience in cryptographic algorithms, password-based key derivation, file integrity verification, and secure file handling. Improved my understanding of Flask application development, automated testing, debugging, and deployment. Successfully validated the project with 63 passing tests."
+      ],
+      "repository": "https://github.com/samjoseph04/securevault",
+      "demo": "https://securevault-tawny.vercel.app/",
+      "image": "/assets/fc1c704b-2d78-457b-8b67-01c8574835f3.png"
     }
   ],
   "games": [
